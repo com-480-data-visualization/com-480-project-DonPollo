@@ -22,6 +22,14 @@ Please, fill the following sections about your project.
 > Find a dataset (or multiple) that you will explore. Assess the quality of the data it contains and how much preprocessing / data-cleaning it will require before tackling visualization. We recommend using a standard dataset as this course is not about scraping nor data processing.
 >
 > Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)), you could use also the DataSets proposed by the ENAC (see the Announcements section on Zulip).
+> 
+In this project, we will combine two datasets: the first one is [2022-2023 Football Team Stats](https://www.kaggle.com/datasets/vivovinco/20222023-football-team-stats) and the second one is [2022-2023 Football Player Stats](https://www.kaggle.com/datasets/vivovinco/20222023-football-player-stats). These two datasets contain stats for players and teams in the 2022-2023 season.
+
+The selected datasets appear to be rich in content, providing comprehensive statistics on player and team performances throughout the 2022-2023 season. Initial examination suggests that the data is well-structured, with variables covering various aspects such as goals, assists, passes, shots, tackles, and more. It will still require some preprocessing before visualization. This may involve:
+
+- Standardization: While raw stats provide valuable insights, they often lack consistency due to variations in recording methods across matches or teams. By standardizing data, such as converting all measurements to a common unit or adjusting for playing time, we can ensure a level playing field for comparison. This process facilitates easier analysis and interpretation of player performances across different matches and teams.
+
+- Feature Engineering: Raw statistics offer a snapshot of player performance but may not capture the full spectrum of skills and contributions. Through feature engineering, we can derive new metrics or transform existing ones to better represent player capabilities. For instance, creating composite indices that weigh different statistical categories based on their importance in determining overall player effectiveness can provide a more comprehensive view of performance. Additionally, incorporating contextual factors such as match importance, opponent strength, or positional roles can enrich our understanding of player contributions beyond the numbers.
 
 ### Problematic
 
