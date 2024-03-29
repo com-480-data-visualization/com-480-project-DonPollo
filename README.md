@@ -27,9 +27,9 @@ In this project, we will combine two datasets: the first one is [2022-2023 Footb
 
 The selected datasets appear to be rich in content, providing comprehensive statistics on player and team performances throughout the 2022-2023 season. Initial examination suggests that the data is well-structured, with variables covering various aspects such as goals, assists, passes, shots, tackles, and more. It will still require some preprocessing before visualization. This may involve:
 
-- Standardization: While raw stats provide valuable insights, they often lack consistency due to variations in recording methods across matches or teams. By standardizing data, such as converting all measurements to a common unit or adjusting for playing time, we can ensure a level playing field for comparison. This process facilitates easier analysis and interpretation of player performances across different matches and teams.
+- **Standardization:** While raw stats provide valuable insights, they often lack consistency due to variations in recording methods across matches or teams. By standardizing data, such as converting all measurements to a common unit or adjusting for playing time, we can ensure a level playing field for comparison. This process facilitates easier analysis and interpretation of player performances across different matches and teams.
 
-- Feature Engineering: Raw statistics offer a snapshot of player performance but may not capture the full spectrum of skills and contributions. Through feature engineering, we can derive new metrics or transform existing ones to better represent player capabilities. For instance, creating composite indices that weigh different statistical categories based on their importance in determining overall player effectiveness can provide a more comprehensive view of performance. Additionally, incorporating contextual factors such as match importance, opponent strength, or positional roles can enrich our understanding of player contributions beyond the numbers.
+- **Feature Engineering:** Raw statistics offer a snapshot of player performance but may not capture the full spectrum of skills and contributions. Through feature engineering, we can derive new metrics or transform existing ones to better represent player capabilities. For instance, creating composite indices that weigh different statistical categories based on their importance in determining overall player effectiveness can provide a more comprehensive view of performance. Additionally, incorporating contextual factors such as match importance, opponent strength, or positional roles can enrich our understanding of player contributions beyond the numbers.
 
 ### Problematic
 
@@ -43,13 +43,13 @@ Advanced statistics and performance metrics have provided deep insights, fundame
 
 Our project aims to discover the strategies that lead to success for players and teams in modern football. We are committed to present players and teams performances through diverse visualizations, with the aim of popularizing these practices. By demonstrating to football fans the power of analysis, statistics, and visualizations, we aim to tackle various challenges such as the following:
 
--How can we leverage player and team statistics to objectively determine the best team of the season, contrasting it with the subjective choices made by journalists?
+- **How can we leverage player and team statistics to objectively determine the best team of the season, contrasting it with the subjective choices made by journalists?**
 
--How can we devise an effective method for attributing scores to player statistics and characteristics, thereby creating a standardized rating system? Furthermore, how can we implement this rating system into an interactive tool, resembling FIFA cards, to allow users to compare player statistics and performance across different teams and leagues?
+- **How can we devise an effective method for attributing scores to player statistics and characteristics, thereby creating a standardized rating system? Furthermore, how can we implement this rating system into an interactive tool, resembling FIFA cards, to allow users to compare player statistics and performance across different teams and leagues?**
 
--What are the defining characteristics of top-performing teams across different leagues, positions, and nationalities? Can we create an interactive dashboard that allows users to filter visualizations based on these parameters, providing a focused analysis of specific datasets for both players and teams?
+- **What are the defining characteristics of top-performing teams across different leagues, positions, and nationalities? Can we create an interactive dashboard that allows users to filter visualizations based on these parameters, providing a focused analysis of specific datasets for both players and teams?**
 
--What are the distinct characteristics exhibited by players based on their positions, ages, and nationalities? How do these factors influence a player's performance, playing style, and overall contribution to the team?
+- **What are the distinct characteristics exhibited by players based on their positions, ages, and nationalities? How do these factors influence a player's performance, playing style, and overall contribution to the team?**
 
 By exploring these questions, we want to offer insights into the sophisticated world of football analytics, making it accessible and understandable to fans worldwide. Our aim is to show that with the right analysis and interpretation of data, complex football questions and problems can be approached in a visual manner.
 
