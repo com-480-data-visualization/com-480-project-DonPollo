@@ -38,7 +38,9 @@ The selected datasets appear to be rich in content, providing comprehensive stat
 > - Think of an overview for the project, your motivation, and the target audience.
 
 In the dynamic world of football, clubs like Brentford FC and Brighton & Hove Albion have emerged as pioneers in data-driven player recruitment, transitioning from traditional scouting methods to a more analytical and statistical approach. This significant shift away from relying on scouts' subjective evaluations and intuition marks the start of a new era in football management. The strategic application of statistical analysis in recruitment has demonstrated its potential to revolutionize teams, especially for clubs with limited resources, and has played a crucial role in optimizing team performance and gameplay strategies.
+
 Advanced statistics and performance metrics have provided deep insights, fundamentally enhancing our understanding of the game. This underscores the critical role of data analytics in shaping the future of the sport.
+
 Our project aims to discover the strategies that lead to success for players and teams in modern football. We are committed to present players and teams performances through diverse visualizations, with the aim of popularizing these practices. By demonstrating to football fans the power of analysis, statistics, and visualizations, we aim to tackle various challenges such as the following:
 
 -How can we leverage player and team statistics to objectively determine the best team of the season, contrasting it with the subjective choices made by journalists?
