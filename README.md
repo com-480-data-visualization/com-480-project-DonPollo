@@ -102,6 +102,13 @@ Together, these visualizations offer a comprehensive perspective on team perform
 > - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
 > - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
 
+Many projects have explored football player and team statistics, not only to understand performance but also for prediction purposes. Football clubs increasingly rely on data analytics to optimize player recruitment, improve team performance, and refine gameplay strategies. However, accessing comprehensive visualizations and data can be challenging. While official match presentations offer insights, they often lack the interactivity and depth desired by users.
+
+Our project seeks to fill this gap by using player and team statistics from the 2022-2023 football season into an interactive visualization tool. Unlike others that may focus solely on player or team data, we aim to integrate both datasets, providing users with an immersive dashboard to explore various aspects of performance. Additionally, we aim to overcome specific challenges in football analytics, such as developing a standardized rating system for players and identifying key characteristics of top-performing teams across different leagues, positions, and nationalities.
+
+Our inspiration comes from diverse sources, including existing data visualization projects and sports analytics websites. We aspire to create a visually captivating and informative tool that draws on best practices in data visualization and sports analytics, while also considering the engaging and meaningful visualizations seen in football TV shows, official match presentations, and football games.
+
+
 ## Milestone 2 (26th April, 5pm)
 
 **10% of the final grade**
