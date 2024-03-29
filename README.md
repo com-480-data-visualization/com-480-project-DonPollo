@@ -29,6 +29,21 @@ Please, fill the following sections about your project.
 > - What am I trying to show with my visualization?
 > - Think of an overview for the project, your motivation, and the target audience.
 
+In the dynamic world of football, clubs like Brentford FC and Brighton & Hove Albion have emerged as pioneers in data-driven player recruitment, transitioning from traditional scouting methods to a more analytical and statistical approach. This significant shift away from relying on scouts' subjective evaluations and intuition marks the start of a new era in football management. The strategic application of statistical analysis in recruitment has demonstrated its potential to revolutionize teams, especially for clubs with limited resources, and has played a crucial role in optimizing team performance and gameplay strategies.
+Advanced statistics and performance metrics have provided deep insights, fundamentally enhancing our understanding of the game. This underscores the critical role of data analytics in shaping the future of the sport.
+Our project aims to discover the strategies that lead to success for players and teams in modern football. We are committed to present players and teams performances through diverse visualizations, with the aim of popularizing these practices. By demonstrating to football fans the power of analysis, statistics, and visualizations, we aim to tackle various challenges such as the following:
+
+-How can we leverage player and team statistics to objectively determine the best team of the season, contrasting it with the subjective choices made by journalists?
+
+-How can we devise an effective method for attributing scores to player statistics and characteristics, thereby creating a standardized rating system? Furthermore, how can we implement this rating system into an interactive tool, resembling FIFA cards, to allow users to compare player statistics and performance across different teams and leagues?
+
+-What are the defining characteristics of top-performing teams across different leagues, positions, and nationalities? Can we create an interactive dashboard that allows users to filter visualizations based on these parameters, providing a focused analysis of specific datasets for both players and teams?
+
+-What are the distinct characteristics exhibited by players based on their positions, ages, and nationalities? How do these factors influence a player's performance, playing style, and overall contribution to the team?
+
+By exploring these questions, we want to offer insights into the sophisticated world of football analytics, making it accessible and understandable to fans worldwide. Our aim is to show that with the right analysis and interpretation of data, complex football questions and problems can be approached in a visual manner.
+
+
 ### Exploratory Data Analysis
 
 > Pre-processing of the data set you chose
