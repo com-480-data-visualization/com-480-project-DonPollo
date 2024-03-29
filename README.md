@@ -81,9 +81,9 @@ This dataset provides an overview of team performances:
 3. Attendance: Average attendance per game, particularly for home matches.
 4. Key Players: Identification of top team scorers and the most frequently utilized goalkeeper.
 
-In our data visualization project, we delve into key aspects of team performance and fan engagement in the realm of sports. Through a series of compelling visualizations, we offer insights into various facets of team dynamics and fan behavior, allowing viewers to gain a deeper understanding of the competitive landscape and the fervor surrounding sporting events.
+In our data visualization project, we delve into key aspects of team performance and fan engagement in the realm of sports. Through a series of visualizations, we offer insights into various facets of team dynamics and fan behavior, allowing viewers to gain a deeper understanding of the competitive landscape and the fervor surrounding sporting events.
 
-The first visualization presents a comparative overview of goals scored and conceded by each team, shedding light on their offensive prowess and defensive resilience throughout the season. You can explore how we plotted this data in our project's repository.
+The first visualization presents a comparative overview of goals scored and conceded by each team, shedding light on their offensive prowess and defensive resilience throughout the season. 
 ![download-1](https://github.com/com-480-data-visualization/com-480-project-DonPollo/assets/58795392/5f47c00e-0a9f-47f0-894a-3cb4afe3c919)
 
 The second visualization highlights the top-performing teams based on league points, providing valuable insights into the most successful teams throughout the season and their standings within the league.
@@ -92,7 +92,7 @@ The second visualization highlights the top-performing teams based on league poi
 Lastly, our third visualization showcases the teams with the highest attendance rates, offering a glimpse into the clubs that attract the largest crowds and underlining their popularity and support among fans.
 <img src="https://github.com/com-480-data-visualization/com-480-project-DonPollo/assets/58795392/8863ddeb-16da-4c40-b927-412e6023845e" alt="Alt Text" width="500"/>
 
-Together, these visualizations offer a comprehensive perspective on team performance and fan engagement, enriching our understanding of the dynamic world of sports.
+Together, these visualizations offer a comprehensive perspective on team performance and fan engagement, enriching our understanding of the dynamic world of sports. You can explore how we plotted this data in our project's repository.
 
 ### Related work
 
