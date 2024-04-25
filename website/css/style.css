@@ -87,6 +87,12 @@
 	color: #fff;
 	font-size: 60px;
 }
+.section-1 h2 {
+
+	color: #fff;
+	font-size: 40px;
+}
+
 .section-1 p {
 	color: #bbd6db;
 	font-size: 20px;
@@ -138,3 +144,15 @@
 #checkbox:checked ~ .body .side-bar a span{
 	display: none;
 }
+
+.my-image-test1-graph-coach {
+	width: 30%; 
+	height: auto; 
+	border: 1px solid #000; 
+  }
+
+  .my-image-contact-pic {
+	width: 30%; 
+	height: auto; 
+	border: 1px solid #000; 
+  }
