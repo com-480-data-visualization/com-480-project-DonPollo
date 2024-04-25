@@ -77,18 +77,19 @@
 	background-size: cover;
 	background-position: center;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start; /* aligns content horizontally to the start (left) */
+	align-items: flex-start; /* aligns content vertically to the start (top) */
 	flex-direction: column;
-}
+	padding: 10px 10px 30px 50px; /* Top Right Bottom Left padding */}
+
 .section-1 h1 {
+
 	color: #fff;
 	font-size: 60px;
 }
 .section-1 p {
-	color: #127b8e;
+	color: #bbd6db;
 	font-size: 20px;
-	background: #fff;
 	padding: 7px;
 	border-radius: 5px;
 }
