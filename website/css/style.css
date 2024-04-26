@@ -12,7 +12,6 @@
 	background: #23242b;
 	color: #fff;
 }
-
 .u-name {
 	font-size: 20px;
 	display: flex;
@@ -21,13 +20,11 @@
 	justify-content: center;
 	position: relative;
 }
-
 .u-name label {
 	position: absolute;
 	left: 0;
 	margin-right: 0;
 }
-
 .u-name .before-element::before {
 	content: "";
 	display: inline-block;
@@ -36,7 +33,6 @@
 	position: absolute;
 	left: 0;
 }
-
 .u-name b {
 	color: #127b8e;
 }
@@ -60,7 +56,6 @@
 .user-p h4 {
 	color: #ccc;
 	padding: 5px 0;
-
 }
 .side-bar {
 	width: 250px;
@@ -77,13 +72,12 @@
 	background-size: cover;
 	background-position: center;
 	display: flex;
-	justify-content: flex-start; /* aligns content horizontally to the start (left) */
-	align-items: flex-start; /* aligns content vertically to the start (top) */
+	justify-content: flex-start;
+	align-items: flex-start;
 	flex-direction: column;
-	padding: 10px 10px 30px 50px; /* Top Right Bottom Left padding */}
-
+	padding: 10px 10px 30px 50px;
+}
 .section-1 h1 {
-
 	color: #fff;
 	font-size: 60px;
 }
@@ -132,9 +126,382 @@
 #checkbox:checked ~ .body .side-bar {
 	width: 60px;
 }
-#checkbox:checked ~ .body .side-bar .user-p{
+#checkbox:checked ~ .body .side-bar .user-p {
 	visibility: hidden;
 }
-#checkbox:checked ~ .body .side-bar a span{
+#checkbox:checked ~ .body .side-bar a span {
 	display: none;
 }
+.container {
+	width: 322px;
+	height: 450px;
+	position: relative;
+}
+.card{
+	position: relative;
+	width: 20%;
+	height: auto;
+	left: 65%;
+}
+.card-background {
+	width: 100%;
+	height: auto;
+}
+.player-photo img{
+	position: absolute;
+	width: 70%;
+	height: auto;
+	top: 10%;
+	left: 60%;
+	transform: translateX(-50%);
+}
+.player-details{
+	position: absolute;
+	width: 120%;
+	padding: 10px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+	margin-top: 10px;
+	border-radius: 5px;
+	left: 0%;
+	top: 100%;
+}
+.nation-photo img {
+	position: absolute;
+	width: 15%;
+	height: auto;
+	top: 30%;
+	left: 20%;
+	transform: translateX(-50%);
+}
+.stat {
+	position: absolute;
+	background: rgba(255, 255, 255, 0);
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-size: 100%;
+	color: rgb(56, 50, 28);
+}
+.name {
+	top: 62%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 120%;
+}
+#pace, #shooting, #passing, #dribbling, #defending, #physique {
+	position: absolute;
+}
+#pace {
+	top: 69%;
+	left: 15%;
+}
+#shooting {
+	top: 74%;
+	left: 15%;
+}
+#passing {
+	top: 79%;
+	left: 15%;
+}
+#dribbling {
+	top: 69%;
+	left: 55%;
+}
+#defending {
+	top: 74%;
+	left: 55%;
+}
+#physique {
+	top: 79%;
+	left: 55%;
+}
+#position {
+	font-weight: bold;
+	font-size: 120%;
+	top: 20%;
+	left: 10%;
+}
+.search-container {
+	position: relative;
+	width: 300px;
+}
+#searchBar, #teamSearchBar {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #127b8e;
+	border-radius: 5px;
+	font-size: 16px;
+}
+.suggestions, .teamSuggestions {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 0 0 5px 5px;
+	z-index: 1000;
+	display: none;
+}
+.suggestions a, .teamSuggestions a {
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+	color: black;
+	border-bottom: 1px solid #ddd;
+}
+.suggestions a:last-child, .teamSuggestions a:last-child {
+	border-bottom: none;
+}
+.suggestions a:hover, .teamSuggestions a:hover {
+	background-color: #9fa8d0;
+}
+.suggestions div, .teamSuggestions div {
+	cursor: pointer;
+	padding: 10px;
+	border-bottom: 1px solid #9fa8d0;
+}
+.suggestions div:hover, .suggestions div.highlight, .teamSuggestions div:hover, .teamSuggestions div.highlight {
+	background-color: #9ab1b2;
+}
+
+/* Ensures that club info appears as a card, similar to player card */
+.clubInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-size: cover;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	width: 322px; /* Matching width of player card */
+	height: 450px; /* Matching height of player card */
+	position: relative; /* Allows absolute positioning inside */
+	margin: 20px auto; /* Centering the card */
+}
+
+/* Styles for the team logo similar to player image */
+.club-photo img {
+	height: 300px; /* Set appropriate height */
+	width: auto; /* Size as needed */
+	position: absolute;
+	top: 10%; /* Positioning */
+	left: 70%;
+	border-radius: 100%;
+	border-radius: 5%; /* Rounded corners */
+}
+
+/* Details of the team styled similarly to player stats */
+.club-details {
+	position: absolute;
+	width: 100%; /* Full width of the card */
+	padding: 5px;
+	color: #fff; /* Font color */
+	background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+	border-radius: 5%; /* Rounded corners at the bottom */
+	top: 80%;
+	left: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+/* Styling for the team name and other text details */
+#teamParagraph {
+
+	font-size: 16px; /* Set appropriate font size */
+	color: #fff; /* White text color for readability */
+	text-align: left;
+	margin-top: 15px; /* Spacing from top of the detail area */
+}
+
+.my-image-test1-graph-coach {
+	width: 50%;
+	height: auto;
+	border: 1px solid #000;
+}
+
+.my-image-contact-pic {
+	width: 15%;
+	height: auto;
+	border: 1px solid #000;
+}
+
+.conatct_section-3 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; /* White text color for readability */
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); /* Slightly transparent background */
+	margin-top: 10px; /* Space from the stats above */
+	border-radius: 5px;
+	left: 32%;
+	top: 20%;
+
+}
+.conatct_section-2 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; /* White text color for readability */
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); /* Slightly transparent background */
+	margin-top: 10px; /* Space from the stats above */
+	border-radius: 5px;
+	left: 32%;
+	top: 46%;
+
+}
+.conatct_section {
+	position: absolute;
+	padding: 10px;
+	color: #fff; /* White text color for readability */
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); /* Slightly transparent background */
+	margin-top: 10px; /* Space from the stats above */
+	border-radius: 5px;
+	left: 32%;
+	top: 72%;
+
+}
+
+.section-1 h3 {
+
+	color: #fff;
+	font-size: 30px;
+
+}
+
+.my-image-graph-stats {
+	width: 65%;
+	height: auto;
+	border: 1px solid #000;
+	display: flex;
+	/* justify-content: center;
+    /* align-items: flex-start; */
+}
+.my-image-graph-team {
+	width: 65%;
+	height: auto;
+	border: 1px solid #000;
+	align-self: center;
+	margin-right: -50px;
+}
+
+
+.description_section p {
+	margin: 0;
+	color: #f0ebeb;
+	font-family: Arial, sans-serif;
+}
+
+.graph-container {
+	display: flex;
+}
+
+.graph {
+	flex: 1;
+	margin-right: 20px; /
+}
+
+.description_section {
+	position: absolute;
+	padding: 10px;
+	color: #fff;
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5);
+	margin-top: 10px;
+	border-radius: 5px;
+	left: 65%;
+	top: 150%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+	margin-right: 50px;
+
+}
+
+.description_section-2 {
+	position: absolute;
+	padding: 10px;
+	color: #fff;
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5);
+	margin-top: 10px;
+	border-radius: 5px;
+	left: 65%;
+	top: 70%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+	margin-right: 50px;
+
+}
+.description_section-3 {
+	position: absolute;
+	padding: 10px;
+	color: #fff;
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5);
+	margin-top: 10px;
+	border-radius: 5px;
+	left: 65%;
+	top: 220%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+	margin-right: 50px;
+
+}
+.description_section-4 {
+	position: absolute;
+	padding: 10px;
+	color: #fff;
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5);
+	margin-top: 10px;
+	border-radius: 5px;
+	left: 65%;
+	top: 275%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+	margin-right: 50px;
+
+}
+.description_section-5 {
+	position: absolute;
+	padding: 10px;
+	color: #fff;
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5);
+	margin-top: 10px;
+	border-radius: 5px;
+	left: 65%;
+	top: 325%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+	margin-right: 50px;
+
+}
+.description_section-6 {
+	position: absolute;
+	padding: 10px;
+	color: #fff;
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5);
+	margin-top: 10px;
+	border-radius: 5px;
+	left: 65%;
+	top: 375%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+	margin-right: 50px;
+
+}
+.description_section-7 {
+	position: absolute;
+	padding: 10px;
+	color: #fff;
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5);
+	margin-top: 10px;
+	border-radius: 5px;
+	left: 65%;
+	top: 430%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+	margin-right: 50px;
+
+}
+
