@@ -146,13 +146,189 @@
 }
 
 .my-image-test1-graph-coach {
-	width: 30%; 
+	width: 50%; 
 	height: auto; 
 	border: 1px solid #000; 
   }
 
   .my-image-contact-pic {
-	width: 30%; 
+	width: 15%; 
 	height: auto; 
 	border: 1px solid #000; 
   }
+
+  .conatct_section-3 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; /* White text color for readability */
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); /* Slightly transparent background */
+	margin-top: 10px; /* Space from the stats above */
+	border-radius: 5px;
+	left: 32%;
+	top: 20%;
+
+}
+.conatct_section-2 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; /* White text color for readability */
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); /* Slightly transparent background */
+	margin-top: 10px; /* Space from the stats above */
+	border-radius: 5px;
+	left: 32%;
+	top: 46%;
+
+}
+.conatct_section {
+	position: absolute;
+	padding: 10px;
+	color: #fff; /* White text color for readability */
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); /* Slightly transparent background */
+	margin-top: 10px; /* Space from the stats above */
+	border-radius: 5px;
+	left: 32%;
+	top: 72%;
+
+}
+
+.section-1 h3 {
+
+	color: #fff;
+	font-size: 30px;
+
+}
+
+.my-image-graph-stats {
+	width: 65%; 
+	height: auto; 
+	border: 1px solid #000;
+	display: flex;
+    /* justify-content: center;
+    /* align-items: flex-start; */
+  }
+  .my-image-graph-team {
+	width: 65%; 
+	height: auto; 
+	border: 1px solid #000;
+	align-self: center; 
+  margin-right: -50px;
+  }
+
+
+  .description_section p {
+	margin: 0; 
+	color: #f0ebeb; 
+	font-family: Arial, sans-serif; 
+  }
+
+  .graph-container {
+	display: flex;
+  }
+  
+  .graph {
+	flex: 1; 
+	margin-right: 20px; /
+  }
+
+  .description_section {
+	position: absolute;
+	padding: 10px;
+	color: #fff; 
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); 
+	margin-top: 10px; 
+	border-radius: 5px;
+	left: 65%;
+	top: 150%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+	margin-right: 50px;
+
+}
+
+.description_section-2 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; 
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); 
+	margin-top: 10px; 
+	border-radius: 5px;
+	left: 65%;
+	top: 70%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+	margin-right: 50px;
+
+}
+.description_section-3 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; 
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); 
+	margin-top: 10px; 
+	border-radius: 5px;
+	left: 65%;
+	top: 220%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+	margin-right: 50px;
+
+}
+.description_section-4 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; 
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); 
+	margin-top: 10px; 
+	border-radius: 5px;
+	left: 65%;
+	top: 275%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+	margin-right: 50px;
+
+}
+.description_section-5 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; 
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); 
+	margin-top: 10px; 
+	border-radius: 5px;
+	left: 65%;
+	top: 325%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+	margin-right: 50px;
+
+}
+.description_section-6 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; 
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); 
+	margin-top: 10px; 
+	border-radius: 5px;
+	left: 65%;
+	top: 375%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+	margin-right: 50px;
+
+}
+.description_section-7 {
+	position: absolute;
+	padding: 10px;
+	color: #fff; 
+	left: 400px;
+	background: rgba(80, 68, 186, 0.5); 
+	margin-top: 10px; 
+	border-radius: 5px;
+	left: 65%;
+	top: 430%;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); 
+	margin-right: 50px;
+
+}
