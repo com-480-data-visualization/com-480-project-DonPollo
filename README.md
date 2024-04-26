@@ -111,7 +111,7 @@ Our inspiration comes from diverse sources, including existing data visualizatio
 
 ## Milestone 2 (26th April, 5pm)
 
-**10% of the final grade**
+[Milestone 2 PDF](https://github.com/com-480-data-visualization/com-480-project-DonPollo/blob/master/milestone2.pdf)
 
 
 ## Milestone 3 (31st May, 5pm)
