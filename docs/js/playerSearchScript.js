@@ -80,7 +80,7 @@ document.getElementById('searchBar').addEventListener('input', function() {
     let input = this.value.toLowerCase();
     let suggestionsPanel = document.getElementById('suggestions');
     if (input.length > 2) {
-        fetch('data/playerRadarDf.json')
+        fetch('data/finalPlayerDf.json')
             .then(response => response.json())
             .then(players => {
                 const filteredPlayers = players.filter(p => p.Player.toLowerCase().includes(input));
