@@ -61,7 +61,7 @@ function displayPlayer(playerName) {
                 document.getElementById('position').textContent = player['Best Position_fifa'];
 
                 const playerInfo = `
-                    Age: ${player['MP']} years<br>
+                    Age: ${player['Age']} years<br>
                     Height: ${player['Height(in cm)_fifa']} cm<br>
                     Position: ${player['Best Position_fifa']}<br>
                      Market Value:: ${player['Value(in Euro)_fifa']} euros <br>
@@ -216,7 +216,7 @@ function displayPlayer2(playerName) {
                 document.getElementById('position2').textContent = player['Best Position_fifa'];
 
                 const playerInfo = `
-                    Age: ${player['MP']} years<br>
+                    Age: ${player['Age']} years<br>
                     Height: ${player['Height(in cm)_fifa']} cm<br>
                     Position: ${player['Best Position_fifa']}<br>
                     Market Value: ${player['Value(in Euro)_fifa']} euros<br>

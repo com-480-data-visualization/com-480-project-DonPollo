@@ -67,6 +67,7 @@
 	display: flex;
 }
 .section-1 {
+	position: relative;
 	width: 100%;
 	background: url("../data/background.jpg");
 	background-size: cover;
@@ -143,14 +144,25 @@
 	position: relative;
 }
 
+.card2 {
+	position: absolute;
+	width: 15%;
+	height: auto;
+	left: 80%;
+	top : 30%;
+}
 
 .card{
-	position: relative;
+	position: absolute;
 	width: 15%;
 	height: auto;
 	left: 5%;
-	top : 15%;
+	top : 30%;
 }
+
+
+
+
 .card-background {
 	width: 100%;
 	height: auto;
@@ -551,13 +563,7 @@
 }
 
 
-.card2 {
-	position: relative;
-	width: 15%;
-	height: auto;
-	left: 80%;
-	top : -20%;
-}
+
 
 .card2 .player-photo2 img {
 	position: absolute;
