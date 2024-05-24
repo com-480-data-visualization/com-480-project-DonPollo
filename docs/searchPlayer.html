@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<input type="checkbox" id="checkbox">
+<header class="header">
+	<h2 class="u-name">
+		<span class="before-element"></span>
+		<label for="checkbox">
+			<i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+		</label>
+		Football <b>Dashboard</b>
+	</h2>
+</header>
+<div class="body">
+	<nav class="side-bar">
+		<ul>
+			<li>
+				<a href="index.html">
+					<i class="fa fa-desktop" aria-hidden="true"></i>
+					<span>Home</span>
+				</a>
+			</li>
+			<li>
+				<a href="searchPlayer.html">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					<span>Search Player</span>
+				</a>
+			</li>
+			<li>
+				<a href="searchTeam.html">
+					<i class="fa fa-search" aria-hidden="true"></i>
+					<span>Search Team</span>
+				</a>
+			</li>
+			<li>
+				<a href="bestTeam.html">
+					<i class="fa fa-group" aria-hidden="true"></i>
+					<span>Best Team</span>
+				</a>
+			</li>
+			<li>
+				<a href="bestPlayer.html">
+					<i class="fa fa-user" aria-hidden="true"></i>
+					<span>Best Players</span>
+				</a>
+			</li>
+			<li>
+				<a href="contact.html">
+					<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					<span>Contact</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<section class="section-1">
+		<h1>Search for a Player</h1>
+		<p>Type the player name:</p>
+		<div class="search-container">
+			<input id="searchBar" type="text" placeholder="Type player name" autocomplete="off">
+			<div id="suggestions" class="suggestions" style="display:none;"></div>
+		</div>
+
+		<div class="search-container2">
+			<input id="searchBar2" type="text" placeholder="Type player name" autocomplete="off">
+			<div id="suggestions2" class="suggestions" style="display:none;"></div>
+		</div>
+
+		<div id="playerCard" class="card" style="display:none;">
+			<img id="cardBackground" src="data/blank_card.png" alt="Card Background" class="card-background">
+			<div class="player-photo">
+				<img id="playerImage" src="" alt="Player Image">
+			</div>
+			<div class="nation-photo">
+				<img id="nationImage" src="" alt="Nation Image">
+			</div>
+
+			<div id="playerName" class="stat name">Player Name</div>
+			<div class="stat" id="pace"><strong>PAC:</strong> <span></span></div>
+			<div class="stat" id="shooting"><strong>SHO:</strong> <span></span></div>
+			<div class="stat" id="dribbling"><strong>DRI:</strong> <span></span></div>
+			<div class="stat" id="physique"><strong>PHY:</strong> <span></span></div>
+			<div class="stat" id="passing"><strong>PAS:</strong> <span></span></div>
+			<div class="stat" id="defending"><strong>DEF:</strong> <span></span></div>
+			<div class="stat" id="position"><strong>POS:</strong> <span></span></div>
+			<div id="playerDetails" class="player-details" style="display:none;">
+				<p id="playerInfo"></p>
+			</div>
+		</div>
+
+		<div id="playerCard2" class="card2" style="display:none;">
+			<img id="cardBackground2" src="data/blank_card.png" alt="Card Background" class="card-background">
+			<div class="player-photo">
+				<img id="playerImage2" src="" alt="Player Image">
+			</div>
+			<div class="nation-photo">
+				<img id="nationImage2" src="" alt="Nation Image">
+			</div>
+
+			<div id="playerName2" class="stat name">Player Name</div>
+			<div class="stat" id="pace2"><strong>PAC:</strong> <span></span></div>
+			<div class="stat" id="shooting2"><strong>SHO:</strong> <span></span></div>
+			<div class="stat" id="dribbling2"><strong>DRI:</strong> <span></span></div>
+			<div class="stat" id="physique2"><strong>PHY:</strong> <span></span></div>
+			<div class="stat" id="passing2"><strong>PAS:</strong> <span></span></div>
+			<div class="stat" id="defending2"><strong>DEF:</strong> <span></span></div>
+			<div class="stat" id="position2"><strong>POS:</strong> <span></span></div>
+
+			<div id="playerDetails2" class="player-details" style="display:none;">
+				<p id="playerInfo2"></p>
+			</div>
+		</div>
+
+
+
+	</section>
+</div>
+<script src="js/playerSearchScript.js"></script>
+</body>
+</html>
