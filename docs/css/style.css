@@ -142,11 +142,14 @@
 	height: 450px;
 	position: relative;
 }
+
+
 .card{
 	position: relative;
-	width: 20%;
+	width: 15%;
 	height: auto;
-	left: 65%;
+	left: 5%;
+	top : 15%;
 }
 .card-background {
 	width: 100%;
@@ -182,9 +185,8 @@
 .stat {
 	position: absolute;
 	background: rgba(255, 255, 255, 0);
-	padding: 5px 10px;
 	border-radius: 5px;
-	font-size: 100%;
+	font-size: 90%;
 	color: rgb(56, 50, 28);
 }
 .name {
@@ -193,7 +195,7 @@
 	width: 100%;
 	text-align: center;
 	font-weight: bold;
-	font-size: 120%;
+	font-size: 100%;
 }
 #pace, #shooting, #passing, #dribbling, #defending, #physique {
 	position: absolute;
@@ -509,4 +511,166 @@
 	margin-right: 50px;
 
 }
+
+
+/*****************************/
+
+.search-container2 {
+	position: relative;
+	width: 300px;
+}
+
+#searchBar2 {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #127b8e;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+#suggestions2 {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 0 0 5px 5px;
+	z-index: 1000;
+	display: none;
+}
+
+#suggestions2 div {
+	cursor: pointer;
+	padding: 10px;
+	border-bottom: 1px solid #9fa8d0;
+}
+
+#suggestions2 div:hover, #suggestions2 div.highlight {
+	background-color: #9ab1b2;
+}
+
+
+.card2 {
+	position: relative;
+	width: 15%;
+	height: auto;
+	left: 80%;
+	top : -20%;
+}
+
+.card2 .player-photo2 img {
+	position: absolute;
+	width: 70%;
+	height: auto;
+	top: 10%;
+	left: 60%;
+	transform: translateX(-50%);
+}
+
+.card2 .nation-photo2 img {
+	position: absolute;
+	width: 15%;
+	height: auto;
+	top: 30%;
+	left: 20%;
+	transform: translateX(-50%);
+}
+
+.card2 .player-details2 {
+	position: absolute;
+	width: 120%;
+	padding: 10px;
+	color: #fff;
+	background: rgba(0, 0, 0, 0.5);
+	margin-top: 10px;
+	border-radius: 5px;
+	left: 0%;
+	top: 100%;
+}
+
+.card2 .stat2 {
+	position: absolute;
+	background: rgba(255, 255, 255, 0);
+	border-radius: 5px;
+	font-size: 90%;
+	color: rgb(56, 50, 28);
+}
+
+.card2 .name {
+	top: 62%;
+	left: 0%;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 100%;
+}
+
+.card2 #pace2, #shooting2, #passing2, #dribbling2, #defending2, #physique2 {
+	position: absolute;
+}
+
+.card2 #pace2 {
+	top: 69%;
+	left: 15%;
+}
+
+.card2 #shooting2 {
+	top: 74%;
+	left: 15%;
+}
+
+.card2 #passing2 {
+	top: 79%;
+	left: 15%;
+}
+
+.card2 #dribbling2 {
+	top: 69%;
+	left: 55%;
+}
+
+.card2 #defending2 {
+	top: 74%;
+	left: 55%;
+}
+
+.card2 #physique2 {
+	top: 79%;
+	left: 55%;
+}
+
+.card2 #position2 {
+	font-weight: bold;
+	font-size: 120%;
+	top: 20%;
+	left: 10%;
+}
+#suggestions2 {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 0 0 5px 5px;
+	z-index: 1000;
+	display: none;
+}
+
+#suggestions2 div {
+	cursor: pointer;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+#suggestions2 div:last-child {
+	border-bottom: none;
+}
+
+#suggestions2 div:hover, #suggestions2 div.highlight {
+	background-color: #9ab1b2;
+}
+
+
 
