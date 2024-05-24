@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Student's First Barchart</title>
+    <meta name="description" content="Best players in Europe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="../web_modules/d3/dist/d3.js"></script>
+    <link href="/docs/css/style.css" rel="stylesheet" />
+    <style>
+        rect {
+            fill-opacity: 0.8;
+        }
+        rect:hover {
+            fill-opacity: 1;
+        }
+        .legend rect {
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+<h1>Best players in Europe according to our metrics</h1>
+
+<div>
+    <strong>Select the League:</strong>
+    <label for="filter-comp"></label><select id="filter-comp">
+        <option value="All">All</option>
+    </select>
+</div>
+
+<div>
+    <strong>Select the Metric:</strong>
+    <label for="filter-metric"></label><select id="filter-metric">
+        <option value="pace_metric">Pace</option>
+        <option value="shooting_metric">Shooting</option>
+        <option value="passing_metric">Passing</option>
+        <option value="dribble_metric">Dribbling</option>
+        <option value="defensive_metric">Defending</option>
+        <option value="physical_metric">Physical</option>
+        <option value="overall_metric">Overall</option>
+    </select>
+</div>
+
+<script>
+    const margin = { top: 40, bottom: 10, left: 120, right: 20 };
+    const width = 900 - margin.left - margin.right;
+    const height = 600 - margin.top - margin.bottom;
+
+    // Creates sources <svg> element
+    const svg = d3
+        .select("body")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom);
+
+    // Group used to enforce margin
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Global variable for all data
+    let data;
+
+    // Scales setup
+    const xscale = d3.scaleLinear().range([0, width]);
+    const yscale = d3.scaleBand().rangeRound([0, height]).paddingInner(0.1);
+
+    // Axis setup
+    const xaxis = d3.axisTop().scale(xscale);
+    const g_xaxis = g.append("g").attr("class", "x axis");
+    const yaxis = d3.axisLeft().scale(yscale);
+    const g_yaxis = g.append("g").attr("class", "y axis");
+
+    // Color scale for positions
+    const positionColors = {
+        'GK': 'red', // Orange
+        'CB': '#FF7F00', // Orange
+        'LB': '#FFE135', // Light Yellow
+        'RB': '#FFE135', // Light Yellow
+        'LWB': '#FFE135', // Light Yellow
+        'RWB': '#FFE135', // Light Yellow
+        'CM': '#32CD32', // Lime Green
+        'CDM': '#228B22', // Forest Green
+        'CAM': '#7CFC00', // Lawn Green
+        'CF': '#1E90FF', // Dodger Blue
+        'ST': '#1E90FF', // Dodger Blue
+        'LW': '#4169E1', // Royal Blue
+        'RW': '#4169E1', // Royal Blue
+        'LM': '#6495ED', // Cornflower Blue
+        'RM': '#6495ED'  // Cornflower Blue
+    };
+
+    const colorScale = d3.scaleOrdinal()
+        .domain(Object.keys(positionColors))
+        .range(Object.values(positionColors));
+
+    // Append legend to the SVG container
+    const legend = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", `translate(${width - margin.right + 60}, ${margin.top + 250})`);
+
+    // Add background contour
+    legend.append("rect")
+        .attr("x", -5)
+        .attr("y", -5)
+        .attr("width", 80)
+        .attr("height", Object.keys(positionColors).length * 20 + 10)
+        .attr("fill", "rgba(255, 255, 255, 0.8)")
+        .attr("stroke", "black")
+        .attr("stroke-width", 1)
+        .attr("rx", 5)
+        .attr("ry", 5);
+
+    // Add legend rectangles and text
+    Object.entries(positionColors).forEach(([position, color], index) => {
+        legend.append("rect")
+            .attr("x", 0)
+            .attr("y", index * 20)
+            .attr("width", 10)
+            .attr("height", 10)
+            .attr("fill", color);
+
+        legend.append("text")
+            .attr("x", 15)
+            .attr("y", index * 20 + 9)
+            .text(position)
+            .attr("class", "legend-text")
+            .style("font-size", "12px")
+            .attr("alignment-baseline", "middle");
+    });
+
+    /////////////////////////
+
+    d3.json("/docs/data/finalPlayerDf.json").then((json) => {
+        data = json;
+        populateDropdowns();
+        update(data);
+    });
+
+    function populateDropdowns() {
+        const uniqueComps = ['MLS', 'La Liga', 'Serie A', 'Bundesliga', 'Ligue 1', 'Premier League'];
+        const dropdownComp = d3.select("#filter-comp");
+        dropdownComp.selectAll("option")
+            .data(uniqueComps)
+            .enter()
+            .append("option")
+            .attr("value", d => d)
+            .text(d => d);
+
+        // Populate the metric dropdown with predefined metric options
+        const uniqueMetrics = ['pace_metric', 'shooting_metric', 'passing_metric', 'dribble_metric', 'defensive_metric', 'physical_metric', 'overall_metric'];
+        const dropdownMetric = d3.select("#filter-metric");
+        dropdownMetric.selectAll("option")
+            .data(uniqueMetrics)
+            .enter()
+            .append("option")
+            .attr("value", d => d)
+            .text(d => d.charAt(0).toUpperCase() + d.slice(1).replace('_', ' '));
+    }
+
+    function update(new_data) {
+        const selectedMetric = d3.select("#filter-metric").property("value");
+        new_data = new_data.filter(player => player['Best Position_fifa'] !== 'GK');
+        // Sort the data in descending order based on the selected metric and take the top 20
+        new_data.sort((a, b) => b[selectedMetric] - a[selectedMetric]);
+        const top_20_data = new_data.slice(0, 20);
+
+        // Update the scales
+        xscale.domain([70, 100]);
+        yscale.domain(top_20_data.map((d) => d['Player']));
+
+        // Render the axis
+        g_xaxis.transition().call(xaxis);
+        g_yaxis.transition().call(yaxis);
+
+        // Render the chart with new data
+        const rect = g
+            .selectAll("rect")
+            .data(top_20_data, (d) => d['Player'])
+            .join(
+                (enter) => {
+                    const rect_enter = enter.append("rect").attr("x", 0);
+                    rect_enter.append("title");
+                    return rect_enter;
+                },
+                (update) => update,
+                (exit) => exit.remove()
+            );
+
+        // ENTER + UPDATE
+        rect
+            .transition()
+            .attr("height", yscale.bandwidth())
+            .attr("width", (d) => xscale(d[selectedMetric]))
+            .attr("y", (d) => yscale(d['Player']))
+            .attr("fill", (d) => colorScale(d['Best Position_fifa'])); // Assuming primary position is the first one listed
+
+        rect.select("title").text((d) => `${d['Player']}: ${d[selectedMetric]}`);
+    }
+
+    // Interactivity
+    d3.select("#filter-comp").on("change", function () {
+        const selectedComp = d3.select(this).property("value");
+        if (selectedComp === "All") {
+            update(data);
+        } else {
+            const filtered_data = data.filter((d) => d['Comp'] === selectedComp);
+            update(filtered_data);
+        }
+    });
+
+    d3.select("#filter-metric").on("change", function () {
+        const selectedComp = d3.select("#filter-comp").property("value");
+        if (selectedComp === "All") {
+            update(data);
+        } else {
+            const filtered_data = data.filter((d) => d['Comp'] === selectedComp);
+            update(filtered_data);
+        }
+    });
+</script>
+</body>
+</html>
