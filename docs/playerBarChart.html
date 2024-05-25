@@ -70,6 +70,18 @@
     const xscale = d3.scaleLinear().range([0, width]);
     const yscale = d3.scaleBand().rangeRound([0, height]).paddingInner(0.1);
 
+    // Add a tooltip div in the body
+    const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("position", "absolute")
+        .style("background", "#f4f4f4")
+        .style("padding", "5px")
+        .style("border", "1px solid #ddd")
+        .style("border-radius", "3px")
+        .style("pointer-events", "none")
+        .style("opacity", 0)
+        .style("transition", "opacity 0.2s");
+
     // Axis setup
     const xaxis = d3.axisTop().scale(xscale);
     const g_xaxis = g.append("g").attr("class", "x axis");
@@ -193,19 +205,35 @@
             .style("stroke", "white"); // Change this color to your preferred color
 
 
-        // Render the chart with new data
         const rect = g
             .selectAll("rect")
             .data(top_20_data, (d) => d['Player'])
             .join(
                 (enter) => {
                     const rect_enter = enter.append("rect").attr("x", 0);
-                    rect_enter.append("title");
+                    // Remove the title element to prevent default tooltip
+                    // rect_enter.append("title");
                     return rect_enter;
                 },
                 (update) => update,
                 (exit) => exit.remove()
             );
+
+
+        // Add tooltip interactivity
+        rect.on("mouseover", function(event, d) {
+            tooltip.transition().style("opacity", .9);
+            tooltip.html(`${d['Player']} (${d['Squad']}): ${d[selectedMetric]}`)
+                .style("left", (event.pageX + 5) + "px")
+                .style("top", (event.pageY - 28) + "px");
+        })
+            .on("mouseout", function() {
+                tooltip.transition().style("opacity", 0);
+            })
+            .on("mousemove", function(event) {
+                tooltip.style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            });
 
         // ENTER + UPDATE
         rect
