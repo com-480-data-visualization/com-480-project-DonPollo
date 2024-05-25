@@ -148,7 +148,7 @@
 	position: absolute;
 	width: 15%;
 	height: auto;
-	left: 80%;
+	left: 72%;
 	top : 30%;
 }
 
@@ -245,6 +245,7 @@
 .search-container {
 	position: relative;
 	width: 300px;
+	top: 5%;
 }
 #searchBar, #teamSearchBar {
 	width: 100%;
@@ -302,10 +303,10 @@
 
 /* Styles for the team logo similar to player image */
 .club-photo img {
-	height: 300px; /* Set appropriate height */
-	width: auto; /* Size as needed */
+	height: 300px;
+	width: auto;
 	position: absolute;
-	top: 10%; /* Positioning */
+	top: 10%;
 	left: 70%;
 	border-radius: 100%;
 	border-radius: 5%; /* Rounded corners */
@@ -443,12 +444,11 @@
 	position: absolute;
 	padding: 10px;
 	color: #fff;
-	left: 400px;
 	background: rgba(80, 68, 186, 0.5);
 	margin-top: 10px;
 	border-radius: 5px;
-	left: 65%;
-	top: 70%;
+	left: 10%;
+	top: 80%;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 	margin-right: 50px;
 
@@ -457,7 +457,6 @@
 	position: absolute;
 	padding: 10px;
 	color: #fff;
-	left: 400px;
 	background: rgba(80, 68, 186, 0.5);
 	margin-top: 10px;
 	border-radius: 5px;
@@ -526,10 +525,18 @@
 
 
 /*****************************/
+.radarChart {
+	position: absolute;
+	left: 30%;
+	top: 25%;
+	width: 400px; /* Adjust the width as needed */
+	height: auto; /* Keep height auto to maintain aspect ratio */
+}
 
 .search-container2 {
 	position: relative;
 	width: 300px;
+	left: 70%;
 }
 
 #searchBar2 {
