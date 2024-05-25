@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_378ca21eec8680e6b42370d42f071c9f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_378ca21eec8680e6b42370d42f071c9f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_378ca21eec8680e6b42370d42f071c9f = L.map(
+                "map_378ca21eec8680e6b42370d42f071c9f",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_33022a51bb2f18f29218220d80a3703c = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+            var circle_marker_b972e27c10ee9930209b987b6c59c16a = L.circleMarker(
+                [41.1533, 20.1683],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.4547199493640015, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_1f23f66f681559c3c0fd69d831977515 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92edd39b9cb80ff135ea719d956881a4 = $(`<div id="html_92edd39b9cb80ff135ea719d956881a4" style="width: 100.0%; height: 100.0%;">Albania: 11 players</div>`)[0];
+                popup_1f23f66f681559c3c0fd69d831977515.setContent(html_92edd39b9cb80ff135ea719d956881a4);
+            
+        
+
+        circle_marker_b972e27c10ee9930209b987b6c59c16a.bindPopup(popup_1f23f66f681559c3c0fd69d831977515)
+        ;
+
+        
+    
+    
+            var circle_marker_75785be643680ee3d313ddd837b1fd4e = L.circleMarker(
+                [28.0339, 1.6596],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.49964003216865, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_b2024ccf5aebcfcad00192d5968225b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b26a6425697941ebbb014e4493cd0288 = $(`<div id="html_b26a6425697941ebbb014e4493cd0288" style="width: 100.0%; height: 100.0%;">Algeria: 16 players</div>`)[0];
+                popup_b2024ccf5aebcfcad00192d5968225b8.setContent(html_b26a6425697941ebbb014e4493cd0288);
+            
+        
+
+        circle_marker_75785be643680ee3d313ddd837b1fd4e.bindPopup(popup_b2024ccf5aebcfcad00192d5968225b8)
+        ;
+
+        
+    
+    
+            var circle_marker_092218fb143c6c07bf95c530181bc97b = L.circleMarker(
+                [-11.2027, 17.8739],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_8e7ab23807470cbb8209bbc244590099 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_80b5f27c4f215e263e163d7f4be957ec = $(`<div id="html_80b5f27c4f215e263e163d7f4be957ec" style="width: 100.0%; height: 100.0%;">Angola: 2 players</div>`)[0];
+                popup_8e7ab23807470cbb8209bbc244590099.setContent(html_80b5f27c4f215e263e163d7f4be957ec);
+            
+        
+
+        circle_marker_092218fb143c6c07bf95c530181bc97b.bindPopup(popup_8e7ab23807470cbb8209bbc244590099)
+        ;
+
+        
+    
+    
+            var circle_marker_b7c68da855dfc267d8d246a209ab10e0 = L.circleMarker(
+                [-38.4161, -63.6167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.95246434060893, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_44c479fef3152d6be27a49e93459f784 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2c3b2f01018e8c7e3752429f90d31fa0 = $(`<div id="html_2c3b2f01018e8c7e3752429f90d31fa0" style="width: 100.0%; height: 100.0%;">Argentina: 74 players</div>`)[0];
+                popup_44c479fef3152d6be27a49e93459f784.setContent(html_2c3b2f01018e8c7e3752429f90d31fa0);
+            
+        
+
+        circle_marker_b7c68da855dfc267d8d246a209ab10e0.bindPopup(popup_44c479fef3152d6be27a49e93459f784)
+        ;
+
+        
+    
+    
+            var circle_marker_3f6975539f61c148e87380ffc122016c = L.circleMarker(
+                [40.0691, 45.0382],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_4bf971031588f8baa4e5042d7a3ca1fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_903e828466a57fb309ba8bdb32bf21eb = $(`<div id="html_903e828466a57fb309ba8bdb32bf21eb" style="width: 100.0%; height: 100.0%;">Armenia: 2 players</div>`)[0];
+                popup_4bf971031588f8baa4e5042d7a3ca1fa.setContent(html_903e828466a57fb309ba8bdb32bf21eb);
+            
+        
+
+        circle_marker_3f6975539f61c148e87380ffc122016c.bindPopup(popup_4bf971031588f8baa4e5042d7a3ca1fa)
+        ;
+
+        
+    
+    
+            var circle_marker_d309c7cbe3b5b06bc9ae1e4cc63d0ba5 = L.circleMarker(
+                [-25.2744, 133.7751],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.375278407684165, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_b8ba51461823dc702a577b38af497872 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4b7c76c74a5f54971bd17622ac72dab = $(`<div id="html_e4b7c76c74a5f54971bd17622ac72dab" style="width: 100.0%; height: 100.0%;">Australia: 5 players</div>`)[0];
+                popup_b8ba51461823dc702a577b38af497872.setContent(html_e4b7c76c74a5f54971bd17622ac72dab);
+            
+        
+
+        circle_marker_d309c7cbe3b5b06bc9ae1e4cc63d0ba5.bindPopup(popup_b8ba51461823dc702a577b38af497872)
+        ;
+
+        
+    
+    
+            var circle_marker_f9bc063d29a9b6dfb827a1b6635b1e8e = L.circleMarker(
+                [47.5162, 14.5501],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.101887489959422, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_3dba3365abfca26b557c596d33d58527 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad5d16b09e0af8d44ecab15570b1bcea = $(`<div id="html_ad5d16b09e0af8d44ecab15570b1bcea" style="width: 100.0%; height: 100.0%;">Austria: 28 players</div>`)[0];
+                popup_3dba3365abfca26b557c596d33d58527.setContent(html_ad5d16b09e0af8d44ecab15570b1bcea);
+            
+        
+
+        circle_marker_f9bc063d29a9b6dfb827a1b6635b1e8e.bindPopup(popup_3dba3365abfca26b557c596d33d58527)
+        ;
+
+        
+    
+    
+            var circle_marker_bc5a2fba9817e214f411fc72604707a5 = L.circleMarker(
+                [50.8503, 4.3517],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.613603032723674, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_96a81e4305b5894cb2841bf0a3247879 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e1f7aa7b204b14c4cae9bca4ee0c323 = $(`<div id="html_5e1f7aa7b204b14c4cae9bca4ee0c323" style="width: 100.0%; height: 100.0%;">Belgium: 47 players</div>`)[0];
+                popup_96a81e4305b5894cb2841bf0a3247879.setContent(html_5e1f7aa7b204b14c4cae9bca4ee0c323);
+            
+        
+
+        circle_marker_bc5a2fba9817e214f411fc72604707a5.bindPopup(popup_96a81e4305b5894cb2841bf0a3247879)
+        ;
+
+        
+    
+    
+            var circle_marker_d5e2b19a2045f4a34b427dc7d0ecf79f = L.circleMarker(
+                [9.3077, 2.3158],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_bf8d79226427651e3b1ff036e43dd2c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a4b6969084196e57e23866d89f1ce5ab = $(`<div id="html_a4b6969084196e57e23866d89f1ce5ab" style="width: 100.0%; height: 100.0%;">Benin: 3 players</div>`)[0];
+                popup_bf8d79226427651e3b1ff036e43dd2c9.setContent(html_a4b6969084196e57e23866d89f1ce5ab);
+            
+        
+
+        circle_marker_d5e2b19a2045f4a34b427dc7d0ecf79f.bindPopup(popup_bf8d79226427651e3b1ff036e43dd2c9)
+        ;
+
+        
+    
+    
+            var circle_marker_e9e0057ff66bb039f0dfc2284e3278b4 = L.circleMarker(
+                [-16.2902, -63.5887],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_612c0eb839b207cb9e271265ac5f1701 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e57180b8fb5d0e9750bd52afef87b5a9 = $(`<div id="html_e57180b8fb5d0e9750bd52afef87b5a9" style="width: 100.0%; height: 100.0%;">Bolivia: 1 players</div>`)[0];
+                popup_612c0eb839b207cb9e271265ac5f1701.setContent(html_e57180b8fb5d0e9750bd52afef87b5a9);
+            
+        
+
+        circle_marker_e9e0057ff66bb039f0dfc2284e3278b4.bindPopup(popup_612c0eb839b207cb9e271265ac5f1701)
+        ;
+
+        
+    
+    
+            var circle_marker_6f1c9c70a5981439646fb4c186745ea3 = L.circleMarker(
+                [43.9159, 17.6791],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_319710a1448e694a420eaaaf72b5adce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_395f9bf56729518d1c7732f094bfaf81 = $(`<div id="html_395f9bf56729518d1c7732f094bfaf81" style="width: 100.0%; height: 100.0%;">Bosnia and Herzegovina: 2 players</div>`)[0];
+                popup_319710a1448e694a420eaaaf72b5adce.setContent(html_395f9bf56729518d1c7732f094bfaf81);
+            
+        
+
+        circle_marker_6f1c9c70a5981439646fb4c186745ea3.bindPopup(popup_319710a1448e694a420eaaaf72b5adce)
+        ;
+
+        
+    
+    
+            var circle_marker_b9c02a0e2b87d6f04d734defcddf5647 = L.circleMarker(
+                [-14.235, -51.9253],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.829998357048165, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_fe889fa669c1fe061e4748e7dabcdda1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5960ffa10430b2e4a98c8d90fe1cc108 = $(`<div id="html_5960ffa10430b2e4a98c8d90fe1cc108" style="width: 100.0%; height: 100.0%;">Brazil: 71 players</div>`)[0];
+                popup_fe889fa669c1fe061e4748e7dabcdda1.setContent(html_5960ffa10430b2e4a98c8d90fe1cc108);
+            
+        
+
+        circle_marker_b9c02a0e2b87d6f04d734defcddf5647.bindPopup(popup_fe889fa669c1fe061e4748e7dabcdda1)
+        ;
+
+        
+    
+    
+            var circle_marker_0b334d09eefd51f123212e0f5f83f8d4 = L.circleMarker(
+                [42.7339, 25.4858],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_e74762255e159e83574ddd33503037e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eeeb60e7664910980e7f00f0a44e32fe = $(`<div id="html_eeeb60e7664910980e7f00f0a44e32fe" style="width: 100.0%; height: 100.0%;">Bulgaria: 3 players</div>`)[0];
+                popup_e74762255e159e83574ddd33503037e2.setContent(html_eeeb60e7664910980e7f00f0a44e32fe);
+            
+        
+
+        circle_marker_0b334d09eefd51f123212e0f5f83f8d4.bindPopup(popup_e74762255e159e83574ddd33503037e2)
+        ;
+
+        
+    
+    
+            var circle_marker_96f44c9674b1628f6f1272a262fa4f3f = L.circleMarker(
+                [12.2383, -1.5616],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.828313737302301, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_23c35ae428f5d2cc3e846d37caa35c38 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ebb27e076ffcc6c5f3caf24932993c37 = $(`<div id="html_ebb27e076ffcc6c5f3caf24932993c37" style="width: 100.0%; height: 100.0%;">Burkina Faso: 4 players</div>`)[0];
+                popup_23c35ae428f5d2cc3e846d37caa35c38.setContent(html_ebb27e076ffcc6c5f3caf24932993c37);
+            
+        
+
+        circle_marker_96f44c9674b1628f6f1272a262fa4f3f.bindPopup(popup_23c35ae428f5d2cc3e846d37caa35c38)
+        ;
+
+        
+    
+    
+            var circle_marker_a9045ac6ac89adfb41b7d79fe51b0450 = L.circleMarker(
+                [-3.3731, 29.9189],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_cd19489a687adea8076f183eaffef1ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b6b5aeab26315e731fd3615ef8896d6 = $(`<div id="html_0b6b5aeab26315e731fd3615ef8896d6" style="width: 100.0%; height: 100.0%;">Burundi: 1 players</div>`)[0];
+                popup_cd19489a687adea8076f183eaffef1ed.setContent(html_0b6b5aeab26315e731fd3615ef8896d6);
+            
+        
+
+        circle_marker_a9045ac6ac89adfb41b7d79fe51b0450.bindPopup(popup_cd19489a687adea8076f183eaffef1ed)
+        ;
+
+        
+    
+    
+            var circle_marker_60711b657be9ca92ec693160a8551755 = L.circleMarker(
+                [7.3697, 12.3547],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.12415060330663, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_874ddfe20cb3d5defee642fe24df510f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7430f7c1a10a36f464930a2e3d84b1f = $(`<div id="html_b7430f7c1a10a36f464930a2e3d84b1f" style="width: 100.0%; height: 100.0%;">Cameroon: 14 players</div>`)[0];
+                popup_874ddfe20cb3d5defee642fe24df510f.setContent(html_b7430f7c1a10a36f464930a2e3d84b1f);
+            
+        
+
+        circle_marker_60711b657be9ca92ec693160a8551755.bindPopup(popup_874ddfe20cb3d5defee642fe24df510f)
+        ;
+
+        
+    
+    
+            var circle_marker_c2d172e9a1b60ccb1dcca5fb9fa88f4d = L.circleMarker(
+                [56.1304, -106.3468],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.375278407684165, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_0d368a81ce7aab54b8e27d58ae5fb359 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7827f0cea16db7dcc6021b595ac4f857 = $(`<div id="html_7827f0cea16db7dcc6021b595ac4f857" style="width: 100.0%; height: 100.0%;">Canada: 5 players</div>`)[0];
+                popup_0d368a81ce7aab54b8e27d58ae5fb359.setContent(html_7827f0cea16db7dcc6021b595ac4f857);
+            
+        
+
+        circle_marker_c2d172e9a1b60ccb1dcca5fb9fa88f4d.bindPopup(popup_0d368a81ce7aab54b8e27d58ae5fb359)
+        ;
+
+        
+    
+    
+            var circle_marker_c6aad914f965628d0502d75284ced116 = L.circleMarker(
+                [16.5388, -23.0418],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_348493144e728389646afcba0b7dc43d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da321e608f5e715e09cb701b094de813 = $(`<div id="html_da321e608f5e715e09cb701b094de813" style="width: 100.0%; height: 100.0%;">Cape Verde Islands: 3 players</div>`)[0];
+                popup_348493144e728389646afcba0b7dc43d.setContent(html_da321e608f5e715e09cb701b094de813);
+            
+        
+
+        circle_marker_c6aad914f965628d0502d75284ced116.bindPopup(popup_348493144e728389646afcba0b7dc43d)
+        ;
+
+        
+    
+    
+            var circle_marker_12413b474e66376e108975c3ee3ec8c1 = L.circleMarker(
+                [6.6111, 20.9394],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_8fac0168318f6d795d0adaaba20d5794 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_20fd66f39feaae69b0da78c378f473a2 = $(`<div id="html_20fd66f39feaae69b0da78c378f473a2" style="width: 100.0%; height: 100.0%;">Central African Republic: 1 players</div>`)[0];
+                popup_8fac0168318f6d795d0adaaba20d5794.setContent(html_20fd66f39feaae69b0da78c378f473a2);
+            
+        
+
+        circle_marker_12413b474e66376e108975c3ee3ec8c1.bindPopup(popup_8fac0168318f6d795d0adaaba20d5794)
+        ;
+
+        
+    
+    
+            var circle_marker_8ef30e92a21167440c78b4e6ea45e529 = L.circleMarker(
+                [-35.6751, -71.543],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.907755278982138, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_adf81a8fc6fc144aceaf2df67679b51e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_055a62bfbc1061fe260af1bda1cca1e4 = $(`<div id="html_055a62bfbc1061fe260af1bda1cca1e4" style="width: 100.0%; height: 100.0%;">Chile: 9 players</div>`)[0];
+                popup_adf81a8fc6fc144aceaf2df67679b51e.setContent(html_055a62bfbc1061fe260af1bda1cca1e4);
+            
+        
+
+        circle_marker_8ef30e92a21167440c78b4e6ea45e529.bindPopup(popup_adf81a8fc6fc144aceaf2df67679b51e)
+        ;
+
+        
+    
+    
+            var circle_marker_41df845ad8e8b13444edf7dee86378b2 = L.circleMarker(
+                [4.5709, -74.2973],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.406482647787449, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_1f4d8d8ef178ae7d674452b6db349ea2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f8c77d93703b1a3c0e8a05271fb50ea = $(`<div id="html_7f8c77d93703b1a3c0e8a05271fb50ea" style="width: 100.0%; height: 100.0%;">Colombia: 22 players</div>`)[0];
+                popup_1f4d8d8ef178ae7d674452b6db349ea2.setContent(html_7f8c77d93703b1a3c0e8a05271fb50ea);
+            
+        
+
+        circle_marker_41df845ad8e8b13444edf7dee86378b2.bindPopup(popup_1f4d8d8ef178ae7d674452b6db349ea2)
+        ;
+
+        
+    
+    
+            var circle_marker_d1052af3d2b5929f70faeb08fad2b519 = L.circleMarker(
+                [-11.6455, 43.3333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_b6a40eb23e5c02f5720e91a3bc4aa117 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c71cd5fe22ebd825492c26147edaca5 = $(`<div id="html_9c71cd5fe22ebd825492c26147edaca5" style="width: 100.0%; height: 100.0%;">Comoros: 2 players</div>`)[0];
+                popup_b6a40eb23e5c02f5720e91a3bc4aa117.setContent(html_9c71cd5fe22ebd825492c26147edaca5);
+            
+        
+
+        circle_marker_d1052af3d2b5929f70faeb08fad2b519.bindPopup(popup_b6a40eb23e5c02f5720e91a3bc4aa117)
+        ;
+
+        
+    
+    
+            var circle_marker_c1d71b4dfc3fbe6711f1bc54bace42c2 = L.circleMarker(
+                [-0.228, 15.8277],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.828313737302301, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_0c04787eebbd95c4708c3faa296040aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25fb48549dc016bd52f9057aca10c0b7 = $(`<div id="html_25fb48549dc016bd52f9057aca10c0b7" style="width: 100.0%; height: 100.0%;">Congo: 4 players</div>`)[0];
+                popup_0c04787eebbd95c4708c3faa296040aa.setContent(html_25fb48549dc016bd52f9057aca10c0b7);
+            
+        
+
+        circle_marker_c1d71b4dfc3fbe6711f1bc54bace42c2.bindPopup(popup_0c04787eebbd95c4708c3faa296040aa)
+        ;
+
+        
+    
+    
+            var circle_marker_72c66e02703c7fddbfa94f5aa5119bed = L.circleMarker(
+                [-4.0383, 21.7587],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.591673732008658, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_26bff7c5d8494954b61e99a741e5a06f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_425edcae41fe66c679cff8b290810a7d = $(`<div id="html_425edcae41fe66c679cff8b290810a7d" style="width: 100.0%; height: 100.0%;">Congo DR: 8 players</div>`)[0];
+                popup_26bff7c5d8494954b61e99a741e5a06f.setContent(html_425edcae41fe66c679cff8b290810a7d);
+            
+        
+
+        circle_marker_72c66e02703c7fddbfa94f5aa5119bed.bindPopup(popup_26bff7c5d8494954b61e99a741e5a06f)
+        ;
+
+        
+    
+    
+            var circle_marker_8bf65f3a078c267548fc5270e0ed39c1 = L.circleMarker(
+                [9.7489, -83.7534],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_1715365fb0e076d1bb44fa5ce7319c28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4be24649e027869b87cd8f4ca7a71e9 = $(`<div id="html_e4be24649e027869b87cd8f4ca7a71e9" style="width: 100.0%; height: 100.0%;">Costa Rica: 3 players</div>`)[0];
+                popup_1715365fb0e076d1bb44fa5ce7319c28.setContent(html_e4be24649e027869b87cd8f4ca7a71e9);
+            
+        
+
+        circle_marker_8bf65f3a078c267548fc5270e0ed39c1.bindPopup(popup_1715365fb0e076d1bb44fa5ce7319c28)
+        ;
+
+        
+    
+    
+            var circle_marker_fd7cebd71c70187ddd3b93a708e9da75 = L.circleMarker(
+                [45.1, 15.2],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.694848072384611, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_bea1ecdd4bacb1276cc8e5b8106ac90d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_243dd0822bb01dcc9cf39ded382f2d00 = $(`<div id="html_243dd0822bb01dcc9cf39ded382f2d00" style="width: 100.0%; height: 100.0%;">Croatia: 12 players</div>`)[0];
+                popup_bea1ecdd4bacb1276cc8e5b8106ac90d.setContent(html_243dd0822bb01dcc9cf39ded382f2d00);
+            
+        
+
+        circle_marker_fd7cebd71c70187ddd3b93a708e9da75.bindPopup(popup_bea1ecdd4bacb1276cc8e5b8106ac90d)
+        ;
+
+        
+    
+    
+            var circle_marker_18cc3588be6fe7e24a82906cfe8b3b3f = L.circleMarker(
+                [35.1264, 33.4299],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_29ea052d995755d33c215be7763df003 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e35e460847f545cfdd5e1ccaa5c774bb = $(`<div id="html_e35e460847f545cfdd5e1ccaa5c774bb" style="width: 100.0%; height: 100.0%;">Cyprus: 1 players</div>`)[0];
+                popup_29ea052d995755d33c215be7763df003.setContent(html_e35e460847f545cfdd5e1ccaa5c774bb);
+            
+        
+
+        circle_marker_18cc3588be6fe7e24a82906cfe8b3b3f.bindPopup(popup_29ea052d995755d33c215be7763df003)
+        ;
+
+        
+    
+    
+            var circle_marker_f579c0577b03ab722f035db72c833962 = L.circleMarker(
+                [49.8175, 15.473],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.8377304471659395, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_5e83a19cd378b0baa2ed575a96cc41da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1050de968ec9e2dc92ddef9dbdfbe8e = $(`<div id="html_c1050de968ec9e2dc92ddef9dbdfbe8e" style="width: 100.0%; height: 100.0%;">Czech Republic: 6 players</div>`)[0];
+                popup_5e83a19cd378b0baa2ed575a96cc41da.setContent(html_c1050de968ec9e2dc92ddef9dbdfbe8e);
+            
+        
+
+        circle_marker_f579c0577b03ab722f035db72c833962.bindPopup(popup_5e83a19cd378b0baa2ed575a96cc41da)
+        ;
+
+        
+    
+    
+            var circle_marker_a8a5286532d49b31f559bf0c95625c3a = L.circleMarker(
+                [7.5399, -5.5471],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.656627474604601, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_dfe7b12e2f1730fb3446f297c9876fb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a9c353f80f49d7beff312fe2efb2782 = $(`<div id="html_9a9c353f80f49d7beff312fe2efb2782" style="width: 100.0%; height: 100.0%;">Côte d'Ivoire: 24 players</div>`)[0];
+                popup_dfe7b12e2f1730fb3446f297c9876fb6.setContent(html_9a9c353f80f49d7beff312fe2efb2782);
+            
+        
+
+        circle_marker_a8a5286532d49b31f559bf0c95625c3a.bindPopup(popup_dfe7b12e2f1730fb3446f297c9876fb6)
+        ;
+
+        
+    
+    
+            var circle_marker_7ca6542d48b1fd5861a59c2fbf765fdd = L.circleMarker(
+                [56.2639, 9.5018],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.832753737932673, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_7501d5d0c6fe88af7cb1e2aeb486adec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_63fcddb8e12e78f7856de3bb1df0bd94 = $(`<div id="html_63fcddb8e12e78f7856de3bb1df0bd94" style="width: 100.0%; height: 100.0%;">Denmark: 36 players</div>`)[0];
+                popup_7501d5d0c6fe88af7cb1e2aeb486adec.setContent(html_63fcddb8e12e78f7856de3bb1df0bd94);
+            
+        
+
+        circle_marker_7ca6542d48b1fd5861a59c2fbf765fdd.bindPopup(popup_7501d5d0c6fe88af7cb1e2aeb486adec)
+        ;
+
+        
+    
+    
+            var circle_marker_d9447df31aee4c3bf5b21b992560dda1 = L.circleMarker(
+                [18.7357, -70.1627],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_bb9d593f12440e0063a86a8a0175a99c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9a08834e0fd26c1d712ff70f81d474a = $(`<div id="html_d9a08834e0fd26c1d712ff70f81d474a" style="width: 100.0%; height: 100.0%;">Dominican Republic: 1 players</div>`)[0];
+                popup_bb9d593f12440e0063a86a8a0175a99c.setContent(html_d9a08834e0fd26c1d712ff70f81d474a);
+            
+        
+
+        circle_marker_d9447df31aee4c3bf5b21b992560dda1.bindPopup(popup_bb9d593f12440e0063a86a8a0175a99c)
+        ;
+
+        
+    
+    
+            var circle_marker_e21633d197dea9888b3958a52f6385d8 = L.circleMarker(
+                [-1.8312, -78.1834],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.591673732008658, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_ed5ff0552f012c166bb114d487a6b250 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8499a91aba4e8dc9c986d2ff56bf6d6a = $(`<div id="html_8499a91aba4e8dc9c986d2ff56bf6d6a" style="width: 100.0%; height: 100.0%;">Ecuador: 8 players</div>`)[0];
+                popup_ed5ff0552f012c166bb114d487a6b250.setContent(html_8499a91aba4e8dc9c986d2ff56bf6d6a);
+            
+        
+
+        circle_marker_e21633d197dea9888b3958a52f6385d8.bindPopup(popup_ed5ff0552f012c166bb114d487a6b250)
+        ;
+
+        
+    
+    
+            var circle_marker_1eab3e7b9231b0eacc29f57ffa3564fe = L.circleMarker(
+                [26.8206, 30.8025],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.828313737302301, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_285ef582428bec57162a7e95c4f53486 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_60ea6b20f0c778523dc2e2c6e7a2f3f8 = $(`<div id="html_60ea6b20f0c778523dc2e2c6e7a2f3f8" style="width: 100.0%; height: 100.0%;">Egypt: 4 players</div>`)[0];
+                popup_285ef582428bec57162a7e95c4f53486.setContent(html_60ea6b20f0c778523dc2e2c6e7a2f3f8);
+            
+        
+
+        circle_marker_1eab3e7b9231b0eacc29f57ffa3564fe.bindPopup(popup_285ef582428bec57162a7e95c4f53486)
+        ;
+
+        
+    
+    
+            var circle_marker_b07a753fa0c5106869519c514494b78d = L.circleMarker(
+                [52.3555, -1.1743],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.562157417522265, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_abeace52916ca869e0331876a8131151 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_50c2530784430be472ad8a6b1ead9d90 = $(`<div id="html_50c2530784430be472ad8a6b1ead9d90" style="width: 100.0%; height: 100.0%;">England: 178 players</div>`)[0];
+                popup_abeace52916ca869e0331876a8131151.setContent(html_50c2530784430be472ad8a6b1ead9d90);
+            
+        
+
+        circle_marker_b07a753fa0c5106869519c514494b78d.bindPopup(popup_abeace52916ca869e0331876a8131151)
+        ;
+
+        
+    
+    
+            var circle_marker_ca502762d12c783fc06745eda21ef9b5 = L.circleMarker(
+                [1.6508, 10.2679],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_557bf365f76dc3f51f5dce0c3fb9ab58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_04a2ed37af910da8c5b8c64a5c159088 = $(`<div id="html_04a2ed37af910da8c5b8c64a5c159088" style="width: 100.0%; height: 100.0%;">Equatorial Guinea: 1 players</div>`)[0];
+                popup_557bf365f76dc3f51f5dce0c3fb9ab58.setContent(html_04a2ed37af910da8c5b8c64a5c159088);
+            
+        
+
+        circle_marker_ca502762d12c783fc06745eda21ef9b5.bindPopup(popup_557bf365f76dc3f51f5dce0c3fb9ab58)
+        ;
+
+        
+    
+    
+            var circle_marker_7d1f8beb50d899b7d01759467f0b8abb = L.circleMarker(
+                [61.9241, 25.7482],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.828313737302301, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_281a6a8fb588e9d7abbce6e35fcba6a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec2e8514a7b288ba38184d7d6c89c9d4 = $(`<div id="html_ec2e8514a7b288ba38184d7d6c89c9d4" style="width: 100.0%; height: 100.0%;">Finland: 4 players</div>`)[0];
+                popup_281a6a8fb588e9d7abbce6e35fcba6a2.setContent(html_ec2e8514a7b288ba38184d7d6c89c9d4);
+            
+        
+
+        circle_marker_7d1f8beb50d899b7d01759467f0b8abb.bindPopup(popup_281a6a8fb588e9d7abbce6e35fcba6a2)
+        ;
+
+        
+    
+    
+            var circle_marker_c5128e0d29962c6714a174f90f65ac27 = L.circleMarker(
+                [46.6034, 1.8883],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.379040825152433, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_0805c310f1ecc84e2c9a9cd9069ef760 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1f97bb19d9b26d6b7760e97509a3220 = $(`<div id="html_f1f97bb19d9b26d6b7760e97509a3220" style="width: 100.0%; height: 100.0%;">France: 327 players</div>`)[0];
+                popup_0805c310f1ecc84e2c9a9cd9069ef760.setContent(html_f1f97bb19d9b26d6b7760e97509a3220);
+            
+        
+
+        circle_marker_c5128e0d29962c6714a174f90f65ac27.bindPopup(popup_0805c310f1ecc84e2c9a9cd9069ef760)
+        ;
+
+        
+    
+    
+            var circle_marker_000b9ddc0e8dbd8e6bdda7bce63328fc = L.circleMarker(
+                [-0.8037, 11.6094],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_1b0560ac9b76620b33f2b7b08793cb91 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3a5ecf0263bfc9dbc63b98633208f7c1 = $(`<div id="html_3a5ecf0263bfc9dbc63b98633208f7c1" style="width: 100.0%; height: 100.0%;">Gabon: 2 players</div>`)[0];
+                popup_1b0560ac9b76620b33f2b7b08793cb91.setContent(html_3a5ecf0263bfc9dbc63b98633208f7c1);
+            
+        
+
+        circle_marker_000b9ddc0e8dbd8e6bdda7bce63328fc.bindPopup(popup_1b0560ac9b76620b33f2b7b08793cb91)
+        ;
+
+        
+    
+    
+            var circle_marker_2e8e1b565dfe71b370e889fbb9a6b371 = L.circleMarker(
+                [13.4432, -15.3101],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.375278407684165, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_66502e7d30f10f960f436c35674f0e7b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f087800c724d76236641676c28dd9721 = $(`<div id="html_f087800c724d76236641676c28dd9721" style="width: 100.0%; height: 100.0%;">Gambia: 5 players</div>`)[0];
+                popup_66502e7d30f10f960f436c35674f0e7b.setContent(html_f087800c724d76236641676c28dd9721);
+            
+        
+
+        circle_marker_2e8e1b565dfe71b370e889fbb9a6b371.bindPopup(popup_66502e7d30f10f960f436c35674f0e7b)
+        ;
+
+        
+    
+    
+            var circle_marker_3170c62352c5e65125bb7d596b559e54 = L.circleMarker(
+                [42.3154, 43.3569],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_9c18346913b45e9ef391f6ed3cb24ef5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9241fb887a86cb169b79c832c2dbd6f1 = $(`<div id="html_9241fb887a86cb169b79c832c2dbd6f1" style="width: 100.0%; height: 100.0%;">Georgia: 3 players</div>`)[0];
+                popup_9c18346913b45e9ef391f6ed3cb24ef5.setContent(html_9241fb887a86cb169b79c832c2dbd6f1);
+            
+        
+
+        circle_marker_3170c62352c5e65125bb7d596b559e54.bindPopup(popup_9c18346913b45e9ef391f6ed3cb24ef5)
+        ;
+
+        
+    
+    
+            var circle_marker_9c7abd7006aecc8878b7afa2b13012c5 = L.circleMarker(
+                [51.1657, 10.4515],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.041322592152405, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_17234255c5b06fbe4855f954cc0cf134 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c770ea0199d0d4862f22da642bb71cf = $(`<div id="html_7c770ea0199d0d4862f22da642bb71cf" style="width: 100.0%; height: 100.0%;">Germany: 209 players</div>`)[0];
+                popup_17234255c5b06fbe4855f954cc0cf134.setContent(html_7c770ea0199d0d4862f22da642bb71cf);
+            
+        
+
+        circle_marker_9c7abd7006aecc8878b7afa2b13012c5.bindPopup(popup_17234255c5b06fbe4855f954cc0cf134)
+        ;
+
+        
+    
+    
+            var circle_marker_7ac21e7e086e65db50414aca20358758 = L.circleMarker(
+                [7.9465, -1.0232],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.887510598012987, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_31e5cc008c385b5a439c9ce667450265 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8943ca152211d452313a941338ccccaa = $(`<div id="html_8943ca152211d452313a941338ccccaa" style="width: 100.0%; height: 100.0%;">Ghana: 26 players</div>`)[0];
+                popup_31e5cc008c385b5a439c9ce667450265.setContent(html_8943ca152211d452313a941338ccccaa);
+            
+        
+
+        circle_marker_7ac21e7e086e65db50414aca20358758.bindPopup(popup_31e5cc008c385b5a439c9ce667450265)
+        ;
+
+        
+    
+    
+            var circle_marker_ccb90ea24fb241bd7940290dadc50cea = L.circleMarker(
+                [39.0742, 21.8243],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_0be20ac2f74d30b3213360fd4f57d2b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6c11b3d02f6ac17578498647ecef67e4 = $(`<div id="html_6c11b3d02f6ac17578498647ecef67e4" style="width: 100.0%; height: 100.0%;">Greece: 3 players</div>`)[0];
+                popup_0be20ac2f74d30b3213360fd4f57d2b8.setContent(html_6c11b3d02f6ac17578498647ecef67e4);
+            
+        
+
+        circle_marker_ccb90ea24fb241bd7940290dadc50cea.bindPopup(popup_0be20ac2f74d30b3213360fd4f57d2b8)
+        ;
+
+        
+    
+    
+            var circle_marker_8e13db74bc0984b759ced13eb8a00548 = L.circleMarker(
+                [12.1165, -61.679],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_7a018b407d5e4a685f3219a1000b635d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_103308b485ca53726818ef20a3f67fd5 = $(`<div id="html_103308b485ca53726818ef20a3f67fd5" style="width: 100.0%; height: 100.0%;">Grenada: 1 players</div>`)[0];
+                popup_7a018b407d5e4a685f3219a1000b635d.setContent(html_103308b485ca53726818ef20a3f67fd5);
+            
+        
+
+        circle_marker_8e13db74bc0984b759ced13eb8a00548.bindPopup(popup_7a018b407d5e4a685f3219a1000b635d)
+        ;
+
+        
+    
+    
+            var circle_marker_7ddca237fed96709a3eda876aa9da168 = L.circleMarker(
+                [9.9456, -9.6966],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.375278407684165, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_ffeb39b9b0879db1608fa6cab4a5e875 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_881344716c476473050115a8d21488f9 = $(`<div id="html_881344716c476473050115a8d21488f9" style="width: 100.0%; height: 100.0%;">Guinea: 5 players</div>`)[0];
+                popup_ffeb39b9b0879db1608fa6cab4a5e875.setContent(html_881344716c476473050115a8d21488f9);
+            
+        
+
+        circle_marker_7ddca237fed96709a3eda876aa9da168.bindPopup(popup_ffeb39b9b0879db1608fa6cab4a5e875)
+        ;
+
+        
+    
+    
+            var circle_marker_48a972d11fb8e9c81b43e03c928ed2fd = L.circleMarker(
+                [11.8037, -15.1804],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_eb8a8b533342150e50a63272f5bb01d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_368b3873d56e18223d47c0cb3d7c2867 = $(`<div id="html_368b3873d56e18223d47c0cb3d7c2867" style="width: 100.0%; height: 100.0%;">Guinea Bissau: 2 players</div>`)[0];
+                popup_eb8a8b533342150e50a63272f5bb01d8.setContent(html_368b3873d56e18223d47c0cb3d7c2867);
+            
+        
+
+        circle_marker_48a972d11fb8e9c81b43e03c928ed2fd.bindPopup(popup_eb8a8b533342150e50a63272f5bb01d8)
+        ;
+
+        
+    
+    
+            var circle_marker_09377a170ef16d73e389bff9b874d064 = L.circleMarker(
+                [18.9712, -72.2852],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_fca565233e6134ea31fe0cfac01f5d66 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_662003e09526f5b418f6c17b9fc0104a = $(`<div id="html_662003e09526f5b418f6c17b9fc0104a" style="width: 100.0%; height: 100.0%;">Haiti: 1 players</div>`)[0];
+                popup_fca565233e6134ea31fe0cfac01f5d66.setContent(html_662003e09526f5b418f6c17b9fc0104a);
+            
+        
+
+        circle_marker_09377a170ef16d73e389bff9b874d064.bindPopup(popup_fca565233e6134ea31fe0cfac01f5d66)
+        ;
+
+        
+    
+    
+            var circle_marker_53e876deb18a6eda1c86523f9f02b5e2 = L.circleMarker(
+                [15.2, -86.2419],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_fdbf084a0fa4c503924ae76579e7c874 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c23e7461ef99f4c22649a235a20e758 = $(`<div id="html_9c23e7461ef99f4c22649a235a20e758" style="width: 100.0%; height: 100.0%;">Honduras: 3 players</div>`)[0];
+                popup_fdbf084a0fa4c503924ae76579e7c874.setContent(html_9c23e7461ef99f4c22649a235a20e758);
+            
+        
+
+        circle_marker_53e876deb18a6eda1c86523f9f02b5e2.bindPopup(popup_fdbf084a0fa4c503924ae76579e7c874)
+        ;
+
+        
+    
+    
+            var circle_marker_92d49208d22d5fd03a29c3050cf9b655 = L.circleMarker(
+                [47.1625, 19.5033],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.375278407684165, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_bb60347ac653653a01520d28c0d39647 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d96c673a41bb75a52afdc977e94792b = $(`<div id="html_0d96c673a41bb75a52afdc977e94792b" style="width: 100.0%; height: 100.0%;">Hungary: 5 players</div>`)[0];
+                popup_bb60347ac653653a01520d28c0d39647.setContent(html_0d96c673a41bb75a52afdc977e94792b);
+            
+        
+
+        circle_marker_92d49208d22d5fd03a29c3050cf9b655.bindPopup(popup_bb60347ac653653a01520d28c0d39647)
+        ;
+
+        
+    
+    
+            var circle_marker_a9f05c6688be412b64a73ac2caabf9a5 = L.circleMarker(
+                [64.9631, -19.0208],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_e591f03f8c7dd5f8d1801e18cb2d2ef1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8abcbe3305b0e9f8af412111c0bbeb8a = $(`<div id="html_8abcbe3305b0e9f8af412111c0bbeb8a" style="width: 100.0%; height: 100.0%;">Iceland: 1 players</div>`)[0];
+                popup_e591f03f8c7dd5f8d1801e18cb2d2ef1.setContent(html_8abcbe3305b0e9f8af412111c0bbeb8a);
+            
+        
+
+        circle_marker_a9f05c6688be412b64a73ac2caabf9a5.bindPopup(popup_e591f03f8c7dd5f8d1801e18cb2d2ef1)
+        ;
+
+        
+    
+    
+            var circle_marker_c2c33517222fb0f90a7132d9bc383e0a = L.circleMarker(
+                [32.4279, 53.688],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_09715a6c6d4657213541b5b1fb74e890 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39adee058351ceaa18761bb71a7877cb = $(`<div id="html_39adee058351ceaa18761bb71a7877cb" style="width: 100.0%; height: 100.0%;">Iran: 2 players</div>`)[0];
+                popup_09715a6c6d4657213541b5b1fb74e890.setContent(html_39adee058351ceaa18761bb71a7877cb);
+            
+        
+
+        circle_marker_c2c33517222fb0f90a7132d9bc383e0a.bindPopup(popup_09715a6c6d4657213541b5b1fb74e890)
+        ;
+
+        
+    
+    
+            var circle_marker_97030714afff198fd0f618845b778cc2 = L.circleMarker(
+                [31.0461, 34.8516],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_52b513bfe3f6dba0b16abeb760451271 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69834acb9a50cd2030fb7529aa27acdd = $(`<div id="html_69834acb9a50cd2030fb7529aa27acdd" style="width: 100.0%; height: 100.0%;">Israel: 2 players</div>`)[0];
+                popup_52b513bfe3f6dba0b16abeb760451271.setContent(html_69834acb9a50cd2030fb7529aa27acdd);
+            
+        
+
+        circle_marker_97030714afff198fd0f618845b778cc2.bindPopup(popup_52b513bfe3f6dba0b16abeb760451271)
+        ;
+
+        
+    
+    
+            var circle_marker_8457d78c04a8adcf26e5a1626cb76718 = L.circleMarker(
+                [41.8719, 12.5674],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.578870552670631, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_64ab6cb266747641f38dc39a163c0ecc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30c8c7abd2e71ac98f1eebae561c1181 = $(`<div id="html_30c8c7abd2e71ac98f1eebae561c1181" style="width: 100.0%; height: 100.0%;">Italy: 179 players</div>`)[0];
+                popup_64ab6cb266747641f38dc39a163c0ecc.setContent(html_30c8c7abd2e71ac98f1eebae561c1181);
+            
+        
+
+        circle_marker_8457d78c04a8adcf26e5a1626cb76718.bindPopup(popup_64ab6cb266747641f38dc39a163c0ecc)
+        ;
+
+        
+    
+    
+            var circle_marker_e6493a4af23c0491bb781cac5a68e9f2 = L.circleMarker(
+                [18.1096, -77.2975],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.238324625039507, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_8b9c2f341a29aa5344b65147da127986 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22dbbff887ec53fd89f037b710c0dae5 = $(`<div id="html_22dbbff887ec53fd89f037b710c0dae5" style="width: 100.0%; height: 100.0%;">Jamaica: 7 players</div>`)[0];
+                popup_8b9c2f341a29aa5344b65147da127986.setContent(html_22dbbff887ec53fd89f037b710c0dae5);
+            
+        
+
+        circle_marker_e6493a4af23c0491bb781cac5a68e9f2.bindPopup(popup_8b9c2f341a29aa5344b65147da127986)
+        ;
+
+        
+    
+    
+            var circle_marker_6b89f2863f9355fd41bd7dd0b037102f = L.circleMarker(
+                [36.2048, 138.2529],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.49964003216865, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_fee7ac5dee9a141dbc688f7889355afa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b6328fc0a969ec4db1142a20474fd90 = $(`<div id="html_7b6328fc0a969ec4db1142a20474fd90" style="width: 100.0%; height: 100.0%;">Japan: 16 players</div>`)[0];
+                popup_fee7ac5dee9a141dbc688f7889355afa.setContent(html_7b6328fc0a969ec4db1142a20474fd90);
+            
+        
+
+        circle_marker_6b89f2863f9355fd41bd7dd0b037102f.bindPopup(popup_fee7ac5dee9a141dbc688f7889355afa)
+        ;
+
+        
+    
+    
+            var circle_marker_1cd93d2544980d68eede262a20ecfc96 = L.circleMarker(
+                [42.6026, 20.902],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.8377304471659395, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_d015010a763c9e1a09073207204d1837 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30a303f525612ed13558327f2cdbb576 = $(`<div id="html_30a303f525612ed13558327f2cdbb576" style="width: 100.0%; height: 100.0%;">Kosovo: 6 players</div>`)[0];
+                popup_d015010a763c9e1a09073207204d1837.setContent(html_30a303f525612ed13558327f2cdbb576);
+            
+        
+
+        circle_marker_1cd93d2544980d68eede262a20ecfc96.bindPopup(popup_d015010a763c9e1a09073207204d1837)
+        ;
+
+        
+    
+    
+            var circle_marker_c6b3488f8aafd24e3c1d9106d7a1e20d = L.circleMarker(
+                [49.8153, 6.1296],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_289e3c5e8b03142f22dee8c4e3f9c297 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_da94d9ef61fdbe4ca467da7220710d1d = $(`<div id="html_da94d9ef61fdbe4ca467da7220710d1d" style="width: 100.0%; height: 100.0%;">Luxembourg: 3 players</div>`)[0];
+                popup_289e3c5e8b03142f22dee8c4e3f9c297.setContent(html_da94d9ef61fdbe4ca467da7220710d1d);
+            
+        
+
+        circle_marker_c6b3488f8aafd24e3c1d9106d7a1e20d.bindPopup(popup_289e3c5e8b03142f22dee8c4e3f9c297)
+        ;
+
+        
+    
+    
+            var circle_marker_d68da720d568968560cabfc57a08837d = L.circleMarker(
+                [-18.7669, 46.8691],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_abb6499d9a011e778ebc44aa2301cf19 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_28f89725fd3674d418908d1307910d30 = $(`<div id="html_28f89725fd3674d418908d1307910d30" style="width: 100.0%; height: 100.0%;">Madagascar: 1 players</div>`)[0];
+                popup_abb6499d9a011e778ebc44aa2301cf19.setContent(html_28f89725fd3674d418908d1307910d30);
+            
+        
+
+        circle_marker_d68da720d568968560cabfc57a08837d.bindPopup(popup_abb6499d9a011e778ebc44aa2301cf19)
+        ;
+
+        
+    
+    
+            var circle_marker_419d72f266b88a2d73d64c4a52ec348b = L.circleMarker(
+                [17.5707, -3.9962],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.656627474604601, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_1347eac5842ed53e4a39844b70b4b67e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a19f51d20f68ec042bd49b253a6d2d54 = $(`<div id="html_a19f51d20f68ec042bd49b253a6d2d54" style="width: 100.0%; height: 100.0%;">Mali: 24 players</div>`)[0];
+                popup_1347eac5842ed53e4a39844b70b4b67e.setContent(html_a19f51d20f68ec042bd49b253a6d2d54);
+            
+        
+
+        circle_marker_419d72f266b88a2d73d64c4a52ec348b.bindPopup(popup_1347eac5842ed53e4a39844b70b4b67e)
+        ;
+
+        
+    
+    
+            var circle_marker_92339e4849417b131b7db517b2f9c73d = L.circleMarker(
+                [23.6345, -102.5528],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.238324625039507, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_2035baccea63077e775e6a98208a5dd2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48fe17bd95d710cc1bc381ee57b82956 = $(`<div id="html_48fe17bd95d710cc1bc381ee57b82956" style="width: 100.0%; height: 100.0%;">Mexico: 7 players</div>`)[0];
+                popup_2035baccea63077e775e6a98208a5dd2.setContent(html_48fe17bd95d710cc1bc381ee57b82956);
+            
+        
+
+        circle_marker_92339e4849417b131b7db517b2f9c73d.bindPopup(popup_2035baccea63077e775e6a98208a5dd2)
+        ;
+
+        
+    
+    
+            var circle_marker_025a3efc8dce0315af2adf4582826923 = L.circleMarker(
+                [42.7087, 19.3744],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_12df0dbc10333c3bc28acd5a965c9ff8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a906cddb5cd3839b1bb9dfba3dce974 = $(`<div id="html_7a906cddb5cd3839b1bb9dfba3dce974" style="width: 100.0%; height: 100.0%;">Montenegro: 1 players</div>`)[0];
+                popup_12df0dbc10333c3bc28acd5a965c9ff8.setContent(html_7a906cddb5cd3839b1bb9dfba3dce974);
+            
+        
+
+        circle_marker_025a3efc8dce0315af2adf4582826923.bindPopup(popup_12df0dbc10333c3bc28acd5a965c9ff8)
+        ;
+
+        
+    
+    
+            var circle_marker_e176ba49aac63e16d2e84f780f8b0330 = L.circleMarker(
+                [31.7917, -7.0926],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.203592144986466, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_6c3e2457d92823c3232d8fcb4f6ce77d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_51c3a72c8972c486ea7ab136f56d4aeb = $(`<div id="html_51c3a72c8972c486ea7ab136f56d4aeb" style="width: 100.0%; height: 100.0%;">Morocco: 29 players</div>`)[0];
+                popup_6c3e2457d92823c3232d8fcb4f6ce77d.setContent(html_51c3a72c8972c486ea7ab136f56d4aeb);
+            
+        
+
+        circle_marker_e176ba49aac63e16d2e84f780f8b0330.bindPopup(popup_6c3e2457d92823c3232d8fcb4f6ce77d)
+        ;
+
+        
+    
+    
+            var circle_marker_07a7364a299203861bf91200a46a8016 = L.circleMarker(
+                [-18.6657, 35.5296],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_6105e3e2a14b5e92578a5b6719359663 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_64b248557e0bca382fadfeba86cea9e9 = $(`<div id="html_64b248557e0bca382fadfeba86cea9e9" style="width: 100.0%; height: 100.0%;">Mozambique: 1 players</div>`)[0];
+                popup_6105e3e2a14b5e92578a5b6719359663.setContent(html_64b248557e0bca382fadfeba86cea9e9);
+            
+        
+
+        circle_marker_07a7364a299203861bf91200a46a8016.bindPopup(popup_6105e3e2a14b5e92578a5b6719359663)
+        ;
+
+        
+    
+    
+            var circle_marker_79ef78a33d461d4a468f08f2f4cee089 = L.circleMarker(
+                [52.1326, 5.2913],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.23261233171716, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_e044a3a32ba9e9add1222334e43b8549 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0e6b3bcd55d60997b0a833948c869dc9 = $(`<div id="html_0e6b3bcd55d60997b0a833948c869dc9" style="width: 100.0%; height: 100.0%;">Netherlands: 58 players</div>`)[0];
+                popup_e044a3a32ba9e9add1222334e43b8549.setContent(html_0e6b3bcd55d60997b0a833948c869dc9);
+            
+        
+
+        circle_marker_79ef78a33d461d4a468f08f2f4cee089.bindPopup(popup_e044a3a32ba9e9add1222334e43b8549)
+        ;
+
+        
+    
+    
+            var circle_marker_5e7c9765b5aca3acd84350b792988703 = L.circleMarker(
+                [-40.9006, 174.886],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_51ee28c68ef7119885069cd449734b7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_639c072940eda7708b9fee704542a160 = $(`<div id="html_639c072940eda7708b9fee704542a160" style="width: 100.0%; height: 100.0%;">New Zealand: 2 players</div>`)[0];
+                popup_51ee28c68ef7119885069cd449734b7a.setContent(html_639c072940eda7708b9fee704542a160);
+            
+        
+
+        circle_marker_5e7c9765b5aca3acd84350b792988703.bindPopup(popup_51ee28c68ef7119885069cd449734b7a)
+        ;
+
+        
+    
+    
+            var circle_marker_c1db3c3c062250eca2257a1d157fb0a2 = L.circleMarker(
+                [9.082, 8.6753],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.774289614064447, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_aac3da42a10b1370c791f20ae57ec080 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_641719d0ed524130f286630d155d633e = $(`<div id="html_641719d0ed524130f286630d155d633e" style="width: 100.0%; height: 100.0%;">Nigeria: 25 players</div>`)[0];
+                popup_aac3da42a10b1370c791f20ae57ec080.setContent(html_641719d0ed524130f286630d155d633e);
+            
+        
+
+        circle_marker_c1db3c3c062250eca2257a1d157fb0a2.bindPopup(popup_aac3da42a10b1370c791f20ae57ec080)
+        ;
+
+        
+    
+    
+            var circle_marker_7b85fd9da648e6a92aaaddc8b09f2a7f = L.circleMarker(
+                [41.6086, 21.7453],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_28ac54f8b5b5b0a83308d8a37468e9e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c888ddaefeeb9289d6b1d975df47c6c4 = $(`<div id="html_c888ddaefeeb9289d6b1d975df47c6c4" style="width: 100.0%; height: 100.0%;">North Macedonia: 2 players</div>`)[0];
+                popup_28ac54f8b5b5b0a83308d8a37468e9e9.setContent(html_c888ddaefeeb9289d6b1d975df47c6c4);
+            
+        
+
+        circle_marker_7b85fd9da648e6a92aaaddc8b09f2a7f.bindPopup(popup_28ac54f8b5b5b0a83308d8a37468e9e9)
+        ;
+
+        
+    
+    
+            var circle_marker_b57a2d97cec67da03bf5108f895b9bce = L.circleMarker(
+                [54.7877, -6.4923],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_0438146e957bc9049f5bca598e304c83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fbe5cd46cb96d682cb782b3fd596c3f5 = $(`<div id="html_fbe5cd46cb96d682cb782b3fd596c3f5" style="width: 100.0%; height: 100.0%;">Northern Ireland: 3 players</div>`)[0];
+                popup_0438146e957bc9049f5bca598e304c83.setContent(html_fbe5cd46cb96d682cb782b3fd596c3f5);
+            
+        
+
+        circle_marker_b57a2d97cec67da03bf5108f895b9bce.bindPopup(popup_0438146e957bc9049f5bca598e304c83)
+        ;
+
+        
+    
+    
+            var circle_marker_a40eff70a4965b1cc44d551eb6657c82 = L.circleMarker(
+                [60.472, 8.4689],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.987196820661973, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_cdacf4b6fe1c2fae1c2d0126dfcbee2b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7d5634884318a2bd3b9066c821f4eb2 = $(`<div id="html_c7d5634884318a2bd3b9066c821f4eb2" style="width: 100.0%; height: 100.0%;">Norway: 19 players</div>`)[0];
+                popup_cdacf4b6fe1c2fae1c2d0126dfcbee2b.setContent(html_c7d5634884318a2bd3b9066c821f4eb2);
+            
+        
+
+        circle_marker_a40eff70a4965b1cc44d551eb6657c82.bindPopup(popup_cdacf4b6fe1c2fae1c2d0126dfcbee2b)
+        ;
+
+        
+    
+    
+            var circle_marker_3a75ccc27c5ac0d9c80a4d3c9d00a327 = L.circleMarker(
+                [-23.4425, -58.4438],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.828313737302301, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_0a2ab0862f8b628aa0beaab0c7e873fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4c9b015f887f7ea9dff334aba460b79 = $(`<div id="html_d4c9b015f887f7ea9dff334aba460b79" style="width: 100.0%; height: 100.0%;">Paraguay: 4 players</div>`)[0];
+                popup_0a2ab0862f8b628aa0beaab0c7e873fa.setContent(html_d4c9b015f887f7ea9dff334aba460b79);
+            
+        
+
+        circle_marker_3a75ccc27c5ac0d9c80a4d3c9d00a327.bindPopup(popup_0a2ab0862f8b628aa0beaab0c7e873fa)
+        ;
+
+        
+    
+    
+            var circle_marker_4946daa6cfe9956c4176927976bdd017 = L.circleMarker(
+                [-9.19, -75.0152],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.295836866004329, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_9ed3933adaf3f06253ef6b0c05801587 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b78c0ccf0160e42660b1df3f90f04c4 = $(`<div id="html_4b78c0ccf0160e42660b1df3f90f04c4" style="width: 100.0%; height: 100.0%;">Peru: 2 players</div>`)[0];
+                popup_9ed3933adaf3f06253ef6b0c05801587.setContent(html_4b78c0ccf0160e42660b1df3f90f04c4);
+            
+        
+
+        circle_marker_4946daa6cfe9956c4176927976bdd017.bindPopup(popup_9ed3933adaf3f06253ef6b0c05801587)
+        ;
+
+        
+    
+    
+            var circle_marker_2dccbb4be437ee35946a39a78e4c97cc = L.circleMarker(
+                [12.8797, 121.774],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_95c4739e3016be21c2d741b3b4a6cef6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_155baddb17f2959c4f3e197780ab35ce = $(`<div id="html_155baddb17f2959c4f3e197780ab35ce" style="width: 100.0%; height: 100.0%;">Philippines: 1 players</div>`)[0];
+                popup_95c4739e3016be21c2d741b3b4a6cef6.setContent(html_155baddb17f2959c4f3e197780ab35ce);
+            
+        
+
+        circle_marker_2dccbb4be437ee35946a39a78e4c97cc.bindPopup(popup_95c4739e3016be21c2d741b3b4a6cef6)
+        ;
+
+        
+    
+    
+            var circle_marker_77d930dbd253092488cfc2536ac03b66 = L.circleMarker(
+                [51.9194, 19.1451],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.83331693749932, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_1a221d3a2a0a1679b88db8fa6486158f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4909b50a43bc6363efbacede232c91d5 = $(`<div id="html_4909b50a43bc6363efbacede232c91d5" style="width: 100.0%; height: 100.0%;">Poland: 18 players</div>`)[0];
+                popup_1a221d3a2a0a1679b88db8fa6486158f.setContent(html_4909b50a43bc6363efbacede232c91d5);
+            
+        
+
+        circle_marker_77d930dbd253092488cfc2536ac03b66.bindPopup(popup_1a221d3a2a0a1679b88db8fa6486158f)
+        ;
+
+        
+    
+    
+            var circle_marker_bb7da90c47915cf1b08d57fa714d4bb9 = L.circleMarker(
+                [39.3999, -8.2245],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.2830336866663, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_9b3ba0b43b126e650112e41a18f292aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26cabb10fe9ea11379f285270284d9ad = $(`<div id="html_26cabb10fe9ea11379f285270284d9ad" style="width: 100.0%; height: 100.0%;">Portugal: 59 players</div>`)[0];
+                popup_9b3ba0b43b126e650112e41a18f292aa.setContent(html_26cabb10fe9ea11379f285270284d9ad);
+            
+        
+
+        circle_marker_bb7da90c47915cf1b08d57fa714d4bb9.bindPopup(popup_9b3ba0b43b126e650112e41a18f292aa)
+        ;
+
+        
+    
+    
+            var circle_marker_897fe0587e2472386aa916ea8d2825f4 = L.circleMarker(
+                [53.1424, -7.6921],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.4547199493640015, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_94d70a819d4f32cf63e76f1675e54284 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2db9774cf691684a6a9272e5b948d62c = $(`<div id="html_2db9774cf691684a6a9272e5b948d62c" style="width: 100.0%; height: 100.0%;">Republic of Ireland: 11 players</div>`)[0];
+                popup_94d70a819d4f32cf63e76f1675e54284.setContent(html_2db9774cf691684a6a9272e5b948d62c);
+            
+        
+
+        circle_marker_897fe0587e2472386aa916ea8d2825f4.bindPopup(popup_94d70a819d4f32cf63e76f1675e54284)
+        ;
+
+        
+    
+    
+            var circle_marker_1a639849909fe2d65bee1c74d42a7bd3 = L.circleMarker(
+                [56.4907, -4.2026],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.534161491043838, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_584bf95e6b7f334ea561f90f0da9e0ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26801b1ef25828e310617dc360cceef6 = $(`<div id="html_26801b1ef25828e310617dc360cceef6" style="width: 100.0%; height: 100.0%;">Scotland: 23 players</div>`)[0];
+                popup_584bf95e6b7f334ea561f90f0da9e0ee.setContent(html_26801b1ef25828e310617dc360cceef6);
+            
+        
+
+        circle_marker_1a639849909fe2d65bee1c74d42a7bd3.bindPopup(popup_584bf95e6b7f334ea561f90f0da9e0ee)
+        ;
+
+        
+    
+    
+            var circle_marker_595484b89d2f5fa9ee58823141c8f699 = L.circleMarker(
+                [14.4974, -14.4524],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.30196161345544, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_f1c8a85d47a3fae1af0b5e7b19f03ff8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c4eb659a8b30dc28840233480e1c384 = $(`<div id="html_7c4eb659a8b30dc28840233480e1c384" style="width: 100.0%; height: 100.0%;">Senegal: 30 players</div>`)[0];
+                popup_f1c8a85d47a3fae1af0b5e7b19f03ff8.setContent(html_7c4eb659a8b30dc28840233480e1c384);
+            
+        
+
+        circle_marker_595484b89d2f5fa9ee58823141c8f699.bindPopup(popup_f1c8a85d47a3fae1af0b5e7b19f03ff8)
+        ;
+
+        
+    
+    
+            var circle_marker_9165e4fc93075e1be659a6de41a1f49c = L.circleMarker(
+                [44.0165, 21.0059],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_d539f46a926459b3c8eac5fc7daea0a5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c255da29a40139b9f259c4d8cf44e0a2 = $(`<div id="html_c255da29a40139b9f259c4d8cf44e0a2" style="width: 100.0%; height: 100.0%;">Serbia: 1 players</div>`)[0];
+                popup_d539f46a926459b3c8eac5fc7daea0a5.setContent(html_c255da29a40139b9f259c4d8cf44e0a2);
+            
+        
+
+        circle_marker_9165e4fc93075e1be659a6de41a1f49c.bindPopup(popup_d539f46a926459b3c8eac5fc7daea0a5)
+        ;
+
+        
+    
+    
+            var circle_marker_926131720d0ec29923add9c31d9fd45f = L.circleMarker(
+                [8.4606, -11.7799],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_b8233c093f616582020c574333808271 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8396aa508b58d04a9261256e6e54525 = $(`<div id="html_a8396aa508b58d04a9261256e6e54525" style="width: 100.0%; height: 100.0%;">Sierra Leone: 1 players</div>`)[0];
+                popup_b8233c093f616582020c574333808271.setContent(html_a8396aa508b58d04a9261256e6e54525);
+            
+        
+
+        circle_marker_926131720d0ec29923add9c31d9fd45f.bindPopup(popup_b8233c093f616582020c574333808271)
+        ;
+
+        
+    
+    
+            var circle_marker_8fb67e1b76a18fb714a64a18fa19542c = L.circleMarker(
+                [48.669, 19.699],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.238324625039507, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_eeabff6b38e80c8339d7456e2f154d20 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b45e8a0ab2aaa20321cb921b9d549a0 = $(`<div id="html_3b45e8a0ab2aaa20321cb921b9d549a0" style="width: 100.0%; height: 100.0%;">Slovakia: 7 players</div>`)[0];
+                popup_eeabff6b38e80c8339d7456e2f154d20.setContent(html_3b45e8a0ab2aaa20321cb921b9d549a0);
+            
+        
+
+        circle_marker_8fb67e1b76a18fb714a64a18fa19542c.bindPopup(popup_eeabff6b38e80c8339d7456e2f154d20)
+        ;
+
+        
+    
+    
+            var circle_marker_f60ec36cbc2d4303e2c6922227558791 = L.circleMarker(
+                [46.1512, 14.9955],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_e54e272e019c7a9324225644cbbfdaf4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0fa414bb6692f803ca55f1f6b70cc834 = $(`<div id="html_0fa414bb6692f803ca55f1f6b70cc834" style="width: 100.0%; height: 100.0%;">Slovenia: 3 players</div>`)[0];
+                popup_e54e272e019c7a9324225644cbbfdaf4.setContent(html_0fa414bb6692f803ca55f1f6b70cc834);
+            
+        
+
+        circle_marker_f60ec36cbc2d4303e2c6922227558791.bindPopup(popup_e54e272e019c7a9324225644cbbfdaf4)
+        ;
+
+        
+    
+    
+            var circle_marker_c18bc8a167f99703a297ddca530de7a1 = L.circleMarker(
+                [-30.5595, 22.9375],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_103e325a8d701fe68efbc19ccf421eff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29a716737cdfc6535083c78e120951e1 = $(`<div id="html_29a716737cdfc6535083c78e120951e1" style="width: 100.0%; height: 100.0%;">South Africa: 1 players</div>`)[0];
+                popup_103e325a8d701fe68efbc19ccf421eff.setContent(html_29a716737cdfc6535083c78e120951e1);
+            
+        
+
+        circle_marker_c18bc8a167f99703a297ddca530de7a1.bindPopup(popup_103e325a8d701fe68efbc19ccf421eff)
+        ;
+
+        
+    
+    
+            var circle_marker_dd732c56dbd605d52b5709d3939fe28b = L.circleMarker(
+                [40.4637, -3.7492],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.682044893046584, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_fb9d69fdfea2cc5cbcfe7327a6c93867 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf4458d39613e305dce84d58ebbfec23 = $(`<div id="html_bf4458d39613e305dce84d58ebbfec23" style="width: 100.0%; height: 100.0%;">Spain: 259 players</div>`)[0];
+                popup_fb9d69fdfea2cc5cbcfe7327a6c93867.setContent(html_bf4458d39613e305dce84d58ebbfec23);
+            
+        
+
+        circle_marker_dd732c56dbd605d52b5709d3939fe28b.bindPopup(popup_fb9d69fdfea2cc5cbcfe7327a6c93867)
+        ;
+
+        
+    
+    
+            var circle_marker_1ac3d1ab38cb5a359f3e61907e73ab52 = L.circleMarker(
+                [3.9193, -56.0278],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_ddcb2eaeb44087d44d9ae739990a6f0e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c2b3ab7462387318e2d017b0a9101f8 = $(`<div id="html_3c2b3ab7462387318e2d017b0a9101f8" style="width: 100.0%; height: 100.0%;">Suriname: 1 players</div>`)[0];
+                popup_ddcb2eaeb44087d44d9ae739990a6f0e.setContent(html_3c2b3ab7462387318e2d017b0a9101f8);
+            
+        
+
+        circle_marker_1ac3d1ab38cb5a359f3e61907e73ab52.bindPopup(popup_ddcb2eaeb44087d44d9ae739990a6f0e)
+        ;
+
+        
+    
+    
+            var circle_marker_3991776208d7fb311071771ce5b0550d = L.circleMarker(
+                [60.1282, 18.6435],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.987196820661973, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_5e36435260a97c3464ba3933ea3934f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e61d83e3326699079248224f365bcea = $(`<div id="html_6e61d83e3326699079248224f365bcea" style="width: 100.0%; height: 100.0%;">Sweden: 19 players</div>`)[0];
+                popup_5e36435260a97c3464ba3933ea3934f6.setContent(html_6e61d83e3326699079248224f365bcea);
+            
+        
+
+        circle_marker_3991776208d7fb311071771ce5b0550d.bindPopup(popup_5e36435260a97c3464ba3933ea3934f6)
+        ;
+
+        
+    
+    
+            var circle_marker_710bc903cba9a610f5d5008b1cfc1f7a = L.circleMarker(
+                [46.8182, 8.2275],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.887510598012987, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_2104badf724fe499d887a2cc4b29df0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5f090f95dd63fddec8323fde3d225824 = $(`<div id="html_5f090f95dd63fddec8323fde3d225824" style="width: 100.0%; height: 100.0%;">Switzerland: 26 players</div>`)[0];
+                popup_2104badf724fe499d887a2cc4b29df0b.setContent(html_5f090f95dd63fddec8323fde3d225824);
+            
+        
+
+        circle_marker_710bc903cba9a610f5d5008b1cfc1f7a.bindPopup(popup_2104badf724fe499d887a2cc4b29df0b)
+        ;
+
+        
+    
+    
+            var circle_marker_c623af94125146709c8688d5b70c69f7 = L.circleMarker(
+                [8.6195, 0.8248],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_8768363b76c44fe9a08b9e08912969cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6237cd0321f31d83dd6e456485a567bf = $(`<div id="html_6237cd0321f31d83dd6e456485a567bf" style="width: 100.0%; height: 100.0%;">Togo: 3 players</div>`)[0];
+                popup_8768363b76c44fe9a08b9e08912969cd.setContent(html_6237cd0321f31d83dd6e456485a567bf);
+            
+        
+
+        circle_marker_c623af94125146709c8688d5b70c69f7.bindPopup(popup_8768363b76c44fe9a08b9e08912969cd)
+        ;
+
+        
+    
+    
+            var circle_marker_8b717e8305b732b81d8543f84205a9f2 = L.circleMarker(
+                [33.8869, 9.5375],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.8377304471659395, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_07899836a174ec6b6bb59953b8646bef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94c5cd41503c39d8edb05a8f1a2de4b4 = $(`<div id="html_94c5cd41503c39d8edb05a8f1a2de4b4" style="width: 100.0%; height: 100.0%;">Tunisia: 6 players</div>`)[0];
+                popup_07899836a174ec6b6bb59953b8646bef.setContent(html_94c5cd41503c39d8edb05a8f1a2de4b4);
+            
+        
+
+        circle_marker_8b717e8305b732b81d8543f84205a9f2.bindPopup(popup_07899836a174ec6b6bb59953b8646bef)
+        ;
+
+        
+    
+    
+            var circle_marker_0d77c52cc93a05e854e9f920f6e2250a = L.circleMarker(
+                [38.9637, 35.2433],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.193685818395112, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_617aa9d9a43b4b15d94f40bf8f77cbc9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0b4323be25f37ad6a54dc9283321b4e = $(`<div id="html_b0b4323be25f37ad6a54dc9283321b4e" style="width: 100.0%; height: 100.0%;">Turkey: 10 players</div>`)[0];
+                popup_617aa9d9a43b4b15d94f40bf8f77cbc9.setContent(html_b0b4323be25f37ad6a54dc9283321b4e);
+            
+        
+
+        circle_marker_0d77c52cc93a05e854e9f920f6e2250a.bindPopup(popup_617aa9d9a43b4b15d94f40bf8f77cbc9)
+        ;
+
+        
+    
+    
+            var circle_marker_82f88fd7f98eb28d1136d54b4bf5b784 = L.circleMarker(
+                [48.3794, 31.1656],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.591673732008658, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_e8932e45b3b6c9dd83aa307a32d758cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_096e1cbce4cb6106b1408cc165866dfd = $(`<div id="html_096e1cbce4cb6106b1408cc165866dfd" style="width: 100.0%; height: 100.0%;">Ukraine: 8 players</div>`)[0];
+                popup_e8932e45b3b6c9dd83aa307a32d758cd.setContent(html_096e1cbce4cb6106b1408cc165866dfd);
+            
+        
+
+        circle_marker_82f88fd7f98eb28d1136d54b4bf5b784.bindPopup(popup_e8932e45b3b6c9dd83aa307a32d758cd)
+        ;
+
+        
+    
+    
+            var circle_marker_74cc065dc41a3592300e55527504eb6b = L.circleMarker(
+                [37.0902, -95.7129],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.671115273688493, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_fbfa29262e5184cf0aae58058825b5d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11d5ce5eb4b0a01f2398e1ddb22913aa = $(`<div id="html_11d5ce5eb4b0a01f2398e1ddb22913aa" style="width: 100.0%; height: 100.0%;">United States: 17 players</div>`)[0];
+                popup_fbfa29262e5184cf0aae58058825b5d1.setContent(html_11d5ce5eb4b0a01f2398e1ddb22913aa);
+            
+        
+
+        circle_marker_74cc065dc41a3592300e55527504eb6b.bindPopup(popup_fbfa29262e5184cf0aae58058825b5d1)
+        ;
+
+        
+    
+    
+            var circle_marker_23b760514c87a216090209abee06a9e9 = L.circleMarker(
+                [-32.5228, -55.7658],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.887510598012987, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_31b487bc43eae550c9a819f865dc3576 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_06023b016da2c59cb20384fdbf4e88b4 = $(`<div id="html_06023b016da2c59cb20384fdbf4e88b4" style="width: 100.0%; height: 100.0%;">Uruguay: 26 players</div>`)[0];
+                popup_31b487bc43eae550c9a819f865dc3576.setContent(html_06023b016da2c59cb20384fdbf4e88b4);
+            
+        
+
+        circle_marker_23b760514c87a216090209abee06a9e9.bindPopup(popup_31b487bc43eae550c9a819f865dc3576)
+        ;
+
+        
+    
+    
+            var circle_marker_be1e18479acae6cb188a044bf957be22 = L.circleMarker(
+                [41.3775, 64.5853],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.0794415416798357, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_d61866786829ee624e404c8297986c90 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa7103b291decd69d9cac7a67321efd7 = $(`<div id="html_aa7103b291decd69d9cac7a67321efd7" style="width: 100.0%; height: 100.0%;">Uzbekistan: 1 players</div>`)[0];
+                popup_d61866786829ee624e404c8297986c90.setContent(html_aa7103b291decd69d9cac7a67321efd7);
+            
+        
+
+        circle_marker_be1e18479acae6cb188a044bf957be22.bindPopup(popup_d61866786829ee624e404c8297986c90)
+        ;
+
+        
+    
+    
+            var circle_marker_bdc313d520dde63af5798a09a0c25205 = L.circleMarker(
+                [6.4238, -66.5897],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_92577c79dd5feb6b86ad9c29344a37c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5cc2172abd484672d5575677aa4baed0 = $(`<div id="html_5cc2172abd484672d5575677aa4baed0" style="width: 100.0%; height: 100.0%;">Venezuela: 3 players</div>`)[0];
+                popup_92577c79dd5feb6b86ad9c29344a37c5.setContent(html_5cc2172abd484672d5575677aa4baed0);
+            
+        
+
+        circle_marker_bdc313d520dde63af5798a09a0c25205.bindPopup(popup_92577c79dd5feb6b86ad9c29344a37c5)
+        ;
+
+        
+    
+    
+            var circle_marker_6aa5d48bcc7157ba74ac4543c33c68f5 = L.circleMarker(
+                [52.1307, -3.7837],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.317766166719343, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_fde97bfb22cc71d89bee3875d21ebe78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d8e4fef74f94b1058ecb9d79d25f6ed0 = $(`<div id="html_d8e4fef74f94b1058ecb9d79d25f6ed0" style="width: 100.0%; height: 100.0%;">Wales: 15 players</div>`)[0];
+                popup_fde97bfb22cc71d89bee3875d21ebe78.setContent(html_d8e4fef74f94b1058ecb9d79d25f6ed0);
+            
+        
+
+        circle_marker_6aa5d48bcc7157ba74ac4543c33c68f5.bindPopup(popup_fde97bfb22cc71d89bee3875d21ebe78)
+        ;
+
+        
+    
+    
+            var circle_marker_5f9c064cc188ab7a5a62a198d1608575 = L.circleMarker(
+                [-13.1339, 27.8493],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_b8f664cc072c1335eff2da0ef70df028 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_89c08d9cb3a233e117d37d5552f4ca9f = $(`<div id="html_89c08d9cb3a233e117d37d5552f4ca9f" style="width: 100.0%; height: 100.0%;">Zambia: 3 players</div>`)[0];
+                popup_b8f664cc072c1335eff2da0ef70df028.setContent(html_89c08d9cb3a233e117d37d5552f4ca9f);
+            
+        
+
+        circle_marker_5f9c064cc188ab7a5a62a198d1608575.bindPopup(popup_b8f664cc072c1335eff2da0ef70df028)
+        ;
+
+        
+    
+    
+            var circle_marker_1740ef4a5a1eebec0e6cd88a7437d266 = L.circleMarker(
+                [-19.0154, 29.1549],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.1588830833596715, "stroke": true, "weight": 3}
+            ).addTo(map_378ca21eec8680e6b42370d42f071c9f);
+        
+    
+        var popup_6849145b4dbe8f3daef0f14ded2562c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad1b96886f2f56f5eb3906ebb54b9ca9 = $(`<div id="html_ad1b96886f2f56f5eb3906ebb54b9ca9" style="width: 100.0%; height: 100.0%;">Zimbabwe: 3 players</div>`)[0];
+                popup_6849145b4dbe8f3daef0f14ded2562c9.setContent(html_ad1b96886f2f56f5eb3906ebb54b9ca9);
+            
+        
+
+        circle_marker_1740ef4a5a1eebec0e6cd88a7437d266.bindPopup(popup_6849145b4dbe8f3daef0f14ded2562c9)
+        ;
+
+        
+    
+</script>
+</html>

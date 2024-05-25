@@ -407,7 +407,7 @@ function displayPlayer(playerName) {
                 document.getElementById('playerCard').style.display = 'block';
                 document.getElementById('playerName').textContent = playerName;
                 document.getElementById('playerImage').src = `data/players_images/${playerName}.png`;
-                document.getElementById('nationImage').src = `data/flags/${player['Nation']}.png`;
+                document.getElementById('nationImage').src = `data/flags/${player['Nationality_fifa']}.png`;
                 document.getElementById('pace').textContent = `PAC: ${parseInt(player['pace_metric'])}`;
                 document.getElementById('shooting').textContent = `SHO: ${parseInt(player['shooting_metric'])}`;
                 document.getElementById('dribbling').textContent = `DRI: ${parseInt(player['dribble_metric'])}`;
@@ -576,7 +576,7 @@ function displayPlayer2(playerName) {
                 document.getElementById('playerCard2').style.display = 'block';
                 document.getElementById('playerName2').textContent = playerName;
                 document.getElementById('playerImage2').src = `data/players_images/${playerName}.png`;
-                document.getElementById('nationImage2').src = `data/flags/${player['Nation']}.png`;
+                document.getElementById('nationImage2').src = `data/flags/${player['Nationality_fifa']}.png`;
                 document.getElementById('pace2').textContent = `PAC: ${parseInt(player['pace_metric'])}`;
                 document.getElementById('shooting2').textContent = `SHO: ${parseInt(player['shooting_metric'])}`;
                 document.getElementById('dribbling2').textContent = `DRI: ${parseInt(player['dribble_metric'])}`;
