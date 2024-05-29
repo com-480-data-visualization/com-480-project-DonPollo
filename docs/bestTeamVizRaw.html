@@ -182,7 +182,7 @@
                     tooltip.transition().style("opacity", .9);
                     tooltip.html(`
 ${player['Player']} (${player['Squad']}) <br>
-rating: ${player['overall_metric']} <br>
+rating: ${player['overall_metric'].toFixed(2)} <br>
 goals: ${player['Goals']}`)
                         .style("left", (event.pageX + 5) + "px")
                         .style("top", (event.pageY - 28) + "px");

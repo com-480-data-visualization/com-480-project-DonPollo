@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Student's First Pie Chart</title>
+    <meta name="description" content="Best players in Europe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .label-white {
+            color: white;
+            font-size: 20px;
+        }
+        .tooltip {
+            position: absolute;
+            background: #f4f4f4;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .legend {
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        .legend rect {
+            stroke-width: 2;
+            stroke: white;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <strong class="label-white">Select the League:</strong>
+    <label for="filter-comp"></label>
+    <select id="filter-comp"></select>
+</div>
+
+<div>
+    <strong class="label-white">Select the Club:</strong>
+    <label for="filter-club"></label>
+    <select id="filter-club"></select>
+</div>
+
+<div id="chart"></div>
+
+<script>
+    const width = 900;
+    const height = 600;
+    const margin = 40;
+
+    // Append the svg object to the div called 'chart'
+    const svg = d3.select("#chart")
+        .append("svg")
+        .attr("width", width + 200) // Increased width to accommodate legend
+        .attr("height", height)
+        .append("g")
+        .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+    // Set the radius of the pie chart
+    const radius = Math.min(width, height) / 2 - margin;
+
+    // Create a tooltip div that is hidden by default:
+    const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip");
+
+    // Color scale for positions
+    const positionColors = {
+        'GK': 'red',
+        'CB': '#FF7F00',
+        'LB': '#FFE135',
+        'RB': '#FFE135',
+        'LWB': '#FFE135',
+        'RWB': '#FFE135',
+        'CM': '#32CD32',
+        'CDM': '#228B22',
+        'CAM': '#7CFC00',
+        'CF': '#1E90FF',
+        'ST': '#1E90FF',
+        'LW': '#4169E1',
+        'RW': '#4169E1',
+        'LM': '#6495ED',
+        'RM': '#6495ED'
+    };
+
+    const colorScale = d3.scaleOrdinal()
+        .domain(Object.keys(positionColors))
+        .range(Object.values(positionColors));
+
+    d3.json("data/finalPlayerDf.json").then((json) => {
+        data = json;
+        populateDropdowns();
+        update(data);
+    });
+
+    function populateDropdowns() {
+        const uniqueComps = Array.from(new Set(data.map(d => d['Comp'])));
+        const dropdownComp = d3.select("#filter-comp");
+        dropdownComp.selectAll("option")
+            .data(uniqueComps)
+            .enter()
+            .append("option")
+            .attr("value", d => d)
+            .text(d => d);
+
+        updateClubDropdown();
+    }
+
+    function updateClubDropdown() {
+        const selectedComp = d3.select("#filter-comp").property("value");
+        const filteredData = selectedComp ? data.filter(d => d['Comp'] === selectedComp) : data;
+        const uniqueClubs = Array.from(new Set(filteredData.map(d => d['Squad'])))
+            .filter(club => !club.includes(',') && typeof club === 'string');
+        const dropdownClub = d3.select("#filter-club");
+        dropdownClub.selectAll("option").remove();
+        dropdownClub.selectAll("option")
+            .data(uniqueClubs)
+            .enter()
+            .append("option")
+            .attr("value", d => d)
+            .text(d => d);
+    }
+
+    function update(new_data) {
+        const selectedComp = d3.select("#filter-comp").property("value");
+        const selectedClub = d3.select("#filter-club").property("value");
+
+        let filteredData = selectedComp ? new_data.filter(d => d['Comp'] === selectedComp) : new_data;
+        filteredData = selectedClub ? filteredData.filter(d => d['Squad'] === selectedClub) : filteredData;
+        filteredData = filteredData.filter(d => typeof d['Squad'] === 'string'); // Discard clubs with a comma in the name
+
+        const pie = d3.pie()
+            .value(d => d['Goals'])
+            .sort(null);
+
+        const arc = d3.arc()
+            .innerRadius(0)
+            .outerRadius(radius);
+
+        const arcHover = d3.arc()
+            .innerRadius(0)
+            .outerRadius(radius + 10);
+
+        // Generate the pie chart
+        const path = svg.selectAll("path")
+            .data(pie(filteredData), d => d.data['Player']);
+
+        path.enter()
+            .append("path")
+            .merge(path)
+            .attr("d", arc)
+            .attr("fill", d => colorScale(d.data['Best Position_fifa']))
+            .attr("stroke", "white")
+            .style("stroke-width", "2px")
+            .on("mouseover", function(event, d) {
+                d3.select(this).transition().duration(200).attr("d", arcHover);
+                tooltip.transition().duration(200).style("opacity", 0.9);
+                tooltip.html(`${d.data['Player']} : ${d.data['Goals']} goals`)
+                    .style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function() {
+                d3.select(this).transition().duration(200).attr("d", arc);
+                tooltip.transition().duration(500).style("opacity", 0);
+            })
+            .on("mousemove", function(event) {
+                tooltip.style("left", (event.pageX + 5) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            });
+
+        path.exit().remove();
+
+        // Remove the old legend
+        svg.selectAll(".legend").remove();
+
+        // Add a legend
+        const legend = svg.selectAll(".legend")
+            .data(colorScale.domain())
+            .enter().append("g")
+            .attr("class", "legend")
+            .attr("transform", (d, i) => `translate(${radius + 20},${i * 20 - (height / 2) + 20})`);
+
+        legend.append("rect")
+            .attr("width", 18)
+            .attr("height", 18)
+            .style("fill", colorScale);
+
+        legend.append("text")
+            .attr("x", 24)
+            .attr("y", 9)
+            .attr("dy", ".35em")
+            .style("text-anchor", "start")
+            .text(d => d);
+    }
+
+    // Interactivity
+    d3.select("#filter-comp").on("change", function () {
+        updateClubDropdown();
+        update(data);
+    });
+
+    d3.select("#filter-club").on("change", function () {
+        update(data);
+    });
+</script>
+</body>
+</html>
