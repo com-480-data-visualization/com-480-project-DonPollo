@@ -32,6 +32,12 @@
             stroke-width: 2;
             stroke: white;
         }
+        .flag {
+            width: 20px;
+            height: auto;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
@@ -70,63 +76,6 @@
     const tooltip = d3.select("body").append("div")
         .attr("class", "tooltip");
 
-    // Color scale for positions
-    const positionColors = {
-        'GK': 'red',
-        'CB': '#FF7F00',
-        'LB': '#FFE135',
-        'RB': '#FFE135',
-        'LWB': '#FFE135',
-        'RWB': '#FFE135',
-        'CM': '#32CD32',
-        'CDM': '#228B22',
-        'CAM': '#7CFC00',
-        'CF': '#1E90FF',
-        'ST': '#1E90FF',
-        'LW': '#4169E1',
-        'RW': '#4169E1',
-        'LM': '#6495ED',
-        'RM': '#6495ED'
-    };
-
-    const colorScale = d3.scaleOrdinal()
-        .domain(Object.keys(positionColors))
-        .range(Object.values(positionColors));
-
-    // Append legend to the SVG container
-    const legend = svg.append("g")
-        .attr("class", "legend")
-        .attr("transform", `translate(${width - margin.right + 100}, ${margin.top + 250})`);
-
-    // Add background contour
-    legend.append("rect")
-        .attr("x", -5)
-        .attr("y", -5)
-        .attr("width", 60)
-        .attr("height", Object.keys(positionColors).length * 20 + 10)
-        .attr("fill", "rgba(255, 255, 255, 0.8)")
-        .attr("stroke", "black")
-        .attr("stroke-width", 1)
-        .attr("rx", 5)
-        .attr("ry", 5);
-
-    // Add legend rectangles and text
-    Object.entries(positionColors).forEach(([position, color], index) => {
-        legend.append("rect")
-            .attr("x", 0)
-            .attr("y", index * 20)
-            .attr("width", 10)
-            .attr("height", 10)
-            .attr("fill", color);
-
-        legend.append("text")
-            .attr("x", 15)
-            .attr("y", index * 20 + 9)
-            .text(position)
-            .attr("class", "legend-text")
-            .style("font-size", "12px")
-            .attr("alignment-baseline", "middle");
-    });
     d3.json("data/finalPlayerDf.json").then((json) => {
         data = json;
         populateDropdowns();
@@ -169,8 +118,33 @@
         filteredData = selectedClub ? filteredData.filter(d => d['Squad'] === selectedClub) : filteredData;
         filteredData = filteredData.filter(d => typeof d['Squad'] === 'string'); // Discard clubs with a comma in the name
 
+        const nationalityCounts = {};
+
+        filteredData.forEach(d => {
+            if (nationalityCounts[d['Nationality_fifa']]) {
+                nationalityCounts[d['Nationality_fifa']]++;
+            } else {
+                nationalityCounts[d['Nationality_fifa']] = 1
+            }
+        });
+
+        // Convert nationality counts to an array of objects
+        const nationalityData = Object.keys(nationalityCounts).map(key => ({
+            nationality: key,
+            count: nationalityCounts[key],
+            flag: `data/flags/${key}.png` // Assuming flag images are stored in a 'flags' directory
+        }));
+
+        // Compute the total number of players
+        const totalPlayers = nationalityData.reduce((total, d) => total + d.count, 0);
+
+        // Compute the percentage for each nationality
+        nationalityData.forEach(d => {
+            d.percentage = (d.count / totalPlayers) * 100;
+        });
+
         const pie = d3.pie()
-            .value(d => d['Goals'])
+            .value(d => d.percentage)
             .sort(null);
 
         const arc = d3.arc()
@@ -183,19 +157,19 @@
 
         // Generate the pie chart
         const path = svg.selectAll("path")
-            .data(pie(filteredData), d => d.data['Player']);
+            .data(pie(nationalityData));
 
         path.enter()
             .append("path")
             .merge(path)
             .attr("d", arc)
-            .attr("fill", d => colorScale(d.data['Best Position_fifa']))
+            .attr("fill", (d, i) => d3.schemeCategory10[i])
             .attr("stroke", "white")
             .style("stroke-width", "2px")
             .on("mouseover", function(event, d) {
                 d3.select(this).transition().duration(200).attr("d", arcHover);
                 tooltip.transition().duration(200).style("opacity", 0.9);
-                tooltip.html(`${d.data['Player']} : ${d.data['Goals']} goals`)
+                tooltip.html(`<img class="flag" src="${d.data.flag}">${d.data.nationality}: ${d.data.percentage.toFixed(2)}%`)
                     .style("left", (event.pageX + 5) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
@@ -209,28 +183,6 @@
             });
 
         path.exit().remove();
-
-        // Remove the old legend
-        svg.selectAll(".legend").remove();
-
-        // Add a legend
-        const legend = svg.selectAll(".legend")
-            .data(colorScale.domain())
-            .enter().append("g")
-            .attr("class", "legend")
-            .attr("transform", (d, i) => `translate(${radius + 20},${i * 20 - (height / 2) + 20})`);
-
-        legend.append("rect")
-            .attr("width", 18)
-            .attr("height", 18)
-            .style("fill", colorScale);
-
-        legend.append("text")
-            .attr("x", 24)
-            .attr("y", 9)
-            .attr("dy", ".35em")
-            .style("text-anchor", "start")
-            .text(d => d);
     }
 
     // Interactivity

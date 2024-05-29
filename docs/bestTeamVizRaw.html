@@ -183,7 +183,8 @@
                     tooltip.html(`
 ${player['Player']} (${player['Squad']}) <br>
 rating: ${player['overall_metric'].toFixed(2)} <br>
-goals: ${player['Goals']}`)
+goals: ${player['Goals']} <br>
+assists: ${(player['Assists']*player['90s']).toFixed(0)}`)
                         .style("left", (event.pageX + 5) + "px")
                         .style("top", (event.pageY - 28) + "px");
                 })
