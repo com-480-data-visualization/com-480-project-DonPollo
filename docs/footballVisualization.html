@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<input type="checkbox" id="checkbox">
+<header class="header">
+  <h2 class="u-name">
+    <span class="before-element"></span> <!-- Pseudo-element target -->
+    <label for="checkbox">
+      <i id="navbtn" class="fa fa-bars" aria-hidden="true"></i>
+    </label>
+    Football <b> Dashboard</b>
+  </h2>
+</header>
+<div class="body">
+  <nav class="side-bar">
+    <ul>
+      <li>
+        <a href="index.html">
+          <i class="fa fa-desktop" aria-hidden="true"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="searchPlayer.html">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span>Search Player</span>
+        </a>
+      </li>
+      <li>
+        <a href="searchTeam.html">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span>Search Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="bestTeam.html">
+          <i class="fa fa-group" aria-hidden="true"></i>
+          <span>Best Team</span>
+        </a>
+      </li>
+      <li>
+        <a href="bestPlayer.html">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <span>Best Players</span>
+        </a>
+      </li>
+      <li>
+        <a href="contact.html">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="section-1">
+    <h1>Best teams</h1>
+    <p style="margin-bottom: 10px;">Team of the season</p>
+    <h3 style="margin-bottom: 50px;">Choose the competition</h3>
+
+    <div id="football-field" style=" width: 60%; height: 600px; position: relative;"></div>
+
+  </section>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const players = [
+      { name: "Courtois", team: "Real Madrid", img: "data/players_images/Thibaut Courtois.png", x: 325, y: 520, stats: "Stats for Courtois" },
+      { name: "Robertson", team: "Liverpool", img: "data/players_images/Andrew Robertson.png", x: 100, y: 360, stats: "Stats for Robertson" },
+      { name: "Van Dijk", team: "Liverpool", img: "data/players_images/Virgil Van Dijk.png", x: 250, y: 390, stats: "Stats for Van Dijk" },
+      { name: "Rüdiger", team: "Chelsea", img: "data/players_images/Antonio Rudiger.png", x: 400, y: 390, stats: "Stats for Rüdiger" },
+      { name: "Alexander-Arnold", team: "Liverpool", img: "data/players_images/Trent Alexander-Arnold.png", x: 550, y: 360, stats: "Stats for Alexander-Arnold" },
+      { name: "Bellingham", team: "Real Madrid", img: "data/players_images/Jude Bellingham.png", x: 200, y: 200, stats: "Stats for Bellingham" },
+      { name: "Fabinho", team: "Liverpool", img: "data/players_images/Abdou Harroui.png", x: 325, y: 240, stats: "Stats for Fabinho" },
+      { name: "De Bruyne", team: "Man City", img: "data/players_images/kevin De Bruyne.png", x: 450, y: 200, stats: "Stats for De Bruyne" },
+      { name: "Vinícius Jr.", team: "Real Madrid", img: "data/players_images/Vinicius.png", x: 100, y: 50, stats: "Stats for Vinícius Jr." },
+      { name: "Benzema", team: "Real Madrid", img: "data/players_images/Karim Benzema.png", x: 325, y: 25, stats: "Stats for Benzema" },
+      { name: "Mbappé", team: "Paris", img: "data/players_images/Kylian Mbappe.png", x: 550, y: 50, stats: "Stats for Mbappé" },
+    ];
+
+
+    const svg = d3.select("#football-field")
+            .append("svg")
+            .attr("width", "100%")
+            .attr("height", "100%");
+
+    const cards = svg.selectAll(".player-card")
+            .data(players)
+            .enter()
+            .append("foreignObject")
+            .attr("class", "player-card")
+            .attr("x", d => d.x)
+            .attr("y", d => d.y)
+            .attr("width", 100)
+            .attr("height", 120)
+            .html(d => `
+            <div class="player-card" onclick="showStats(event, '${d.stats}')">
+                <img src="${d.img}" alt="${d.name}">
+                <div class="name">${d.name}</div>
+            </div>
+        `);
+
+    window.showStats = function(event, stats) {
+      const existingStats = document.querySelector(".player-stats");
+      if (existingStats) existingStats.remove();
+
+      const statsDiv = document.createElement("div");
+      statsDiv.className = "player-stats visible";
+      statsDiv.style.left = `${event.clientX}px`;
+      statsDiv.style.top = `${event.clientY}px`;
+      statsDiv.innerHTML = stats;
+
+      document.body.appendChild(statsDiv);
+
+      setTimeout(() => {
+        statsDiv.classList.remove("visible");
+      }, 3000);
+    };
+  });
+</script>
+
+<style>
+  #football-field {
+    width: 100%;
+    height: 600px;
+    background-color: orangered;
+    position: relative;
+  }
+
+  .player-card {
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+
+  .player-card img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .player-card .name {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .player-stats {
+    display: none;
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 100;
+  }
+
+  .player-stats.visible {
+    display: block;
+  }
+</style>
+
+</body>
+</html>
