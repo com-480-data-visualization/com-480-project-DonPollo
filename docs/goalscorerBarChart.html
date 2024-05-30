@@ -10,12 +10,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js"></script>
     <link rel="stylesheet" href="css/style.css" >
     <style>
-
         rect {
             fill-opacity: 0.8;
         }
         rect:hover {
             fill-opacity: 1;
+        }
+        .dropdown-container {
+            margin-bottom: 10px; /* Adjust this value to increase/decrease space */
         }
         .legend rect {
             stroke-width: 2;
@@ -34,7 +36,7 @@
     </style>
 </head>
 <body>
-
+<div class="dropdown-container">
 <div>
     <strong class="label-white">Select the League:</strong>
     <label for="filter-comp"></label><select id="filter-comp">
@@ -46,13 +48,15 @@
     <strong class="label-white">Select the statistic:</strong>
     <label for="filter-metric"></label><select id="filter-metric">
     <option value="Goals">Goals scored</option>
-    <option value="Value(in Euro)_fifa">Market value (in euros)</option>
-    <option value="Wage(in Euro)_fifa">Wage (in euros)</option>
+    <option value="Value(in Euro)_fifa">Market value in million euros (M)</option>
+    <option value="Wage(in Euro)_fifa">Wage in thousand euros (k)</option>
 </select>
 </div>
+</div>
+<br>
 
 <script>
-    const margin = { top: 40, bottom: 10, left: 120, right: 20 };
+    const margin = { top: 100, bottom: 10, left: 120, right: 50 };
     const width = 900 - margin.left - margin.right;
     const height = 600 - margin.top - margin.bottom;
 
@@ -177,19 +181,27 @@
             .attr("value", d => d)
             .text(d => d.charAt(0).toUpperCase() + d.slice(1).replace('_', ' '));
     }
+    // Function to format the value
+    function formatValue(value) {
+        if (value >= 1000000.0) {
+            return (value / 1000000.0).toFixed(1) + "M";
+        } else if (value >= 1000.0) {
+            return (value / 1000.0).toFixed(1) + "k";
+        } else {
+            return value;
+        }
+    }
 
     function update(new_data) {
         const selectedMetric = d3.select("#filter-metric").property("value");
-        new_data = new_data.filter(player => player['Best Position_fifa'] !== 'GK');
 
-
-        // Sort the data in descending order based on the selected metric and take the top 20
-        new_data.sort((a, b) => b[selectedMetric] - a[selectedMetric]);
-        const top_20_data = new_data.slice(0, 10);
+        new_data = new_data.filter(player => player['Best Position_fifa'] !== 'GK')
+            .sort((a, b) => b[selectedMetric] - a[selectedMetric])
+            .slice(0, 10);
 
         // Update the scales
-        xscale.domain([0, d3.max(top_20_data, (d) => d[selectedMetric])]);
-        yscale.domain(top_20_data.map((d) => d['Player']));
+        xscale.domain([0, d3.max(new_data, (d) => d[selectedMetric])]);
+        yscale.domain(new_data.map((d) => d['Player']));
 
         // Render the axis
         g_xaxis.transition().call(xaxis);
@@ -197,22 +209,21 @@
 
         g.selectAll(".y.axis text")
             .style("fill", "white");
-        g.selectAll(".x.axis text")
-            .style("fill", "white"); // Change this color to your preferred color
 
-        g.selectAll(".x.axis text")
-            .style("font-size", "15px");
-
-        g.selectAll(".y.axis text")
-            .style("font-size", "15px");
+        g_xaxis.selectAll("text")
+            .style("fill", "white")
+            .style("font-size", "15px")
+            .attr("transform", "rotate(-45)")
+            .style("text-anchor", "start")
+            .attr("dx", "0.5em")
+            .attr("dy", "-0.5em");
 
         g.selectAll(".x.axis path, .x.axis line, .y.axis path, .y.axis line")
             .style("stroke", "white"); // Change this color to your preferred color
 
-
         const rect = g
             .selectAll("rect")
-            .data(top_20_data, (d) => d['Player'])
+            .data(new_data, (d) => d['Player'])
             .join(
                 (enter) => {
                     const rect_enter = enter.append("rect").attr("x", 0);
@@ -223,7 +234,6 @@
                 (update) => update,
                 (exit) => exit.remove()
             );
-
 
         // Add tooltip interactivity
         rect.on("mouseover", function(event, d) {
@@ -248,7 +258,7 @@
             .attr("y", (d) => yscale(d['Player']))
             .attr("fill", (d) => colorScale(d['Best Position_fifa'])); // Assuming primary position is the first one listed
 
-        rect.select("title").text((d) => `${d['Player']}: ${d[selectedMetric]}`);
+        rect.select("title").text((d) => `${d['Player']}: ${formatValue(d[selectedMetric])}`);
     }
 
     // Interactivity
