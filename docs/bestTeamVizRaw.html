@@ -28,7 +28,7 @@
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
             position: relative;
             margin-bottom: 20px;
-            background: url('website_pic/football_pitch2.png') no-repeat center center;
+            background: url('website_pic/football_pitch2.jpg') no-repeat center center;
             background-size: contain;
         }
 
@@ -57,11 +57,12 @@
 
         .player-name {
             position: relative;
-            width: 100%;
+            width: 70%;
             top: 70%; /* Adjusted position to move it up */
+            left: 15%; /* Adjusted position to move it left */  
             font-size: 12px; /* Adjust as needed */
             font-weight: bold;
-            color: black; /* Changed to black */
+            color: white; /* Changed to black */
         }
 
         .label-white {
@@ -74,7 +75,7 @@
 
 <section>
     <div>
-        <strong class="label-white">Select the League:</strong>
+        <strong class="label-white">Select the League: <br> <br> </strong>
         <label for="filter-comp"></label>
         <select id="filter-comp">
             <option value="all">All competitions</option>
@@ -85,6 +86,7 @@
             <option value="Premier League">Premier League</option>
         </select>
     </div>
+    <br>
     <div id="football-field"></div>
 </section>
 
@@ -167,7 +169,7 @@
                     .style("top", positions[index].y + "%");
 
                 card.append("img")
-                    .attr("src", "data/blank_card.png") // Path to your blank card background image
+                    .attr("src", "data/blank_card_special.png") // Path to your blank card background image
                     .attr("class", "card-background");
 
                 card.append("img")

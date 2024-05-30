@@ -30,13 +30,13 @@
 			<li>
 				<a href="searchPlayer.html">
 					<i class="fa fa-search" aria-hidden="true"></i>
-					<span>Search Player</span>
+					<span>Compare Players</span>
 				</a>
 			</li>
 			<li>
 				<a href="searchTeam.html">
 					<i class="fa fa-search" aria-hidden="true"></i>
-					<span>Search Team</span>
+					<span>Compare Teams</span>
 				</a>
 			</li>
 			<li>
@@ -60,11 +60,25 @@
 		</ul>
 	</nav>
 	<section class="section-1">
-		<h1>Search for a Team</h1>
-		<p>Type the team name:</p>
+		<h1>compare teams</h1>
+		<p>Type the 2 team names:</p>
 		<div class="search-container">
-			<input id="teamSearchBar" type="text" placeholder="Type team name" autocomplete="off">
+			<input id="teamSearchBar" type="text" placeholder="Type the first team name" autocomplete="off">
 			<div id="teamSuggestions" class="suggestions" style="display:none;"></div>
+		</div>
+
+		<div class="search-container2">
+			<input id="teamSearchBar2" type="text" placeholder="Type the second team name" autocomplete="off">
+			<div id="teamSuggestions2" class="suggestions" style="display:none;"></div>
+		</div>
+
+		<div id="teamInfo2" class="clubInfo2" style="display:none;">
+			<div class="club-photo2">
+				<img id="teamLogo2" src="" alt="Team Logo2">
+			</div>
+			<div id="teamDetails2" class="club-details2" style="display:none;">
+				<p id="teamParagraph2"></p>
+			</div>
 		</div>
 
 		<div id="teamInfo" class="clubInfo" style="display:none;">
@@ -75,6 +89,11 @@
 				<p id="teamParagraph"></p>
 			</div>
 		</div>
+
+		<div id="chartContainer" style="display: none;"></div>
+
+
+
 	</section>
 </div>
 <script src="js/teamSearchScript.js"></script>
