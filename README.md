@@ -121,6 +121,8 @@ Our inspiration comes from diverse sources, including existing data visualizatio
 
 # Football Dashboard
 
+[Screencast link ]([https://com-480-data-visualization.github.io/com-480-project-DonPollo/](https://www.youtube.com/watch?v=nnFFeMKNuqQ)) 
+
 ## Overview
 
 The Football Dashboard is a comprehensive web application that provides insightful visualizations and comparisons of football players and teams. This interactive platform allows users to explore various statistics, view top players and teams, and understand the game through detailed analytics.
