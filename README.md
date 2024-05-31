@@ -116,12 +116,13 @@ Our inspiration comes from diverse sources, including existing data visualizatio
 
 ## Milestone 3 (31st May, 5pm)
 [website link ](https://com-480-data-visualization.github.io/com-480-project-DonPollo/) 
+[Screencast link ](https://www.youtube.com/watch?v=nnFFeMKNuqQ)
 
 ---
 
 # Football Dashboard
 
-[Screencast link ]([https://com-480-data-visualization.github.io/com-480-project-DonPollo/](https://www.youtube.com/watch?v=nnFFeMKNuqQ)) 
+
 
 ## Overview
 
