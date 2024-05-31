@@ -115,7 +115,7 @@ Our inspiration comes from diverse sources, including existing data visualizatio
 [website link ](https://com-480-data-visualization.github.io/com-480-project-DonPollo/) 
 
 ## Milestone 3 (31st May, 5pm)
-[website link ](https://com-480-data-visualization.github.io/com-480-project-DonPollo/) 
+[website link ](https://com-480-data-visualization.github.io/com-480-project-DonPollo/) <br>
 [Screencast link ](https://www.youtube.com/watch?v=nnFFeMKNuqQ)
 
 ---
