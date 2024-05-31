@@ -183,14 +183,13 @@
 
     function update(new_data) {
         const selectedMetric = d3.select("#filter-metric").property("value");
-        new_data = new_data.filter(player => player['Best Position_fifa'] !== 'GK');
-        // Sort the data in descending order based on the selected metric and take the top 20
-        new_data.sort((a, b) => b[selectedMetric] - a[selectedMetric]);
-        const top_20_data = new_data.slice(0, 20);
+        new_data = new_data.filter(player => player['Best Position_fifa'] !== 'GK')
+            .sort((a, b) => b[selectedMetric] - a[selectedMetric])
+            .slice(0, 20);
 
         // Update the scales
         xscale.domain([70, 100]);
-        yscale.domain(top_20_data.map((d) => d['Player']));
+        yscale.domain(new_data.map((d) => d['Player']));
 
         // Render the axis
         g_xaxis.transition().call(xaxis);
@@ -213,7 +212,7 @@
 
         const rect = g
             .selectAll("rect")
-            .data(top_20_data, (d) => d['Player'])
+            .data(new_data, (d) => d['Player'])
             .join(
                 (enter) => {
                     const rect_enter = enter.append("rect").attr("x", 0);
